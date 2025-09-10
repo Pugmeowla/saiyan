@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "id": "saiyan",
+    "description": "Adds the Saiyans as a transformation for Alien Evo",
+    "pack_format": 15,
+    "version": "0.1"
+  },
+  "dependencies": {
+    "common": {
+    },
+    "fabric": {
+    },
+    "forge": {
+    }
+  }
+}

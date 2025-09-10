@@ -1,0 +1,11 @@
+{
+    "schemaVersion": 1,
+    "authors": [],
+    "environment": "*",
+    "name": "Pugmeowla’s Saiyan Awakening",
+    "id": "saiyan",
+    "version": "0.1",
+    "description": "Adds the Saiyans as a transformation for Alien Evo",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

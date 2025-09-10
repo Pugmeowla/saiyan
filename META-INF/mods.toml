@@ -1,0 +1,21 @@
+modLoader = 'lowcodefml'
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All rights reserved"
+
+[[mods]]
+modId="saiyan"
+displayName="Pugmeowla’s Saiyan Awakening"
+version="0.1"
+logoFile = "logo.png"
+logoBlur = false
+description='''
+Adds the Saiyans as a transformation for Alien Evo
+'''
+
+[[dependencies.saiyan]]
+modId = "palladium"
+mandatory = true
+versionRange = ""
+ordering = "NONE"
+side = "BOTH"
