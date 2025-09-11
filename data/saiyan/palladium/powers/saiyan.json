@@ -66,9 +66,14 @@
           {
     "type": "palladium:not",
     "conditions": [
-      {
+     
+{
+    "type": "palladium:or",
+    "conditions": [ {
     "type": "palladium:has_tag",
     "tag": "ssj"
+}
+]
 }
 ]
 }
@@ -198,7 +203,7 @@
         ]
       }
     },
-    "health":{
+"health":{
     "type": "palladium:attribute_modifier",
     "icon": "minecraft:iron_chestplate",
     "title": "health",
@@ -217,11 +222,24 @@
     "objective": "zenkai",
     "min_score": 0,
     "max_score": 0
+},
+          {
+    "type": "palladium:not",
+    "conditions": [
+     
+{
+    "type": "palladium:or",
+    "conditions": [ {
+    "type": "palladium:has_tag",
+    "tag": "ssj"
+}
+]
+}
+]
 }
       ]
     }
 },
-
  "attack":{
     "type": "palladium:attribute_modifier",
     "icon": "minecraft:iron_chestplate",
@@ -274,6 +292,97 @@
     "attribute": "minecraft:generic.movement_speed",
     "amount": 0.018
 },
+
+"health_ssj":{
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "health",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "minecraft:generic.max_health",
+    "amount": 10,
+     "conditions":{
+      "unlocking":[
+        {
+    "type": "palladium:objective_score",
+    "objective": "zenkai",
+    "min_score": 0,
+    "max_score": 0
+},
+          {
+    "type": "palladium:not",
+    "conditions": [
+     
+{
+    "type": "palladium:or",
+    "conditions": [ {
+    "type": "palladium:has_tag",
+    "tag": "ssj"
+}
+]
+}
+]
+}
+      ]
+    }
+},
+ "attack_ssj":{
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "minecraft:generic.attack_damage",
+    "amount": 2.5
+},
+ "defence_ssj":{
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "minecraft:generic.armor",
+    "amount": 1.5
+},
+ "toughness_ssj":{
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "minecraft:generic.armor_toughness",
+    "amount": 1.25
+},
+ "speed_ssj":{
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "minecraft:generic.movement_speed",
+    "amount": 0.018
+},
+
 "zenkai":{
     "type": "palladium:command",
     "icon": "minecraft:command_block",
