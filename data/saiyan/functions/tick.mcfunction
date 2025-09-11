@@ -1,0 +1,1 @@
+execute as @s[tag=zenkai_cooldown] run execute if entity @s[tag=zenkai_cooldown] run scoreboard players add @p saiyan_cooldown 1

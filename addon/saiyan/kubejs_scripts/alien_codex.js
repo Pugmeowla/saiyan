@@ -3,8 +3,8 @@ global.alienevo_randomization_264 = [false];
 // INTERFACE VALUES
 global.alienevo_regen_264 = [0]; // A faux regen value to represent your alien's healing capability. Values 0 thru 10. Does not effect gameplay.
 global.alienevo_scale_264 = [55]; // Scale of the alien preview render. 55 is default
-global.alienevo_textcolor_264 = [0xa8865a]; // Text color of the alien species name
-global.alienevo_background_264 = ['minecraft:textures/block/dirt.png']; // Tiled texture that appears behind the alien preview render
+global.alienevo_textcolor_264 = [0xFFFF55]; // Text color of the alien species name
+global.alienevo_background_264 = ['minecraft:textures/block/gold_block.png']; // Tiled texture that appears behind the alien preview render
 
 // COLOR PALETTES
 // This is where you will define the default colors your model will use to support color customization.
