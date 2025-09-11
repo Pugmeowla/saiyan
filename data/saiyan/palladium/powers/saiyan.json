@@ -393,8 +393,8 @@
     "list_index": -1,
     "gui_position": "null",
     "description": "null",
-    "first_tick_commands": ["scoreboard players set @s saiyan_cooldown 0"],
-    "last_tick_commands": ["attribute @s minecraft:generic.max_health base set 20"],
+    "first_tick_commands": ["scoreboard players remove @s zenkai 1"],
+    "last_tick_commands": ["attribute @s minecraft:generic.max_health base set 20","scoreboard players set @s saiyan_cooldown 0"],
     "commands": [
       "execute as @s[tag=saiyan_cooldown] run execute if entity @s[tag=saiyan_cooldown] run scoreboard players add @s saiyan_cooldown 1",
       "execute if score @s saiyan_cooldown matches 2400 run scoreboard players set @s saiyan_cooldown 1",
