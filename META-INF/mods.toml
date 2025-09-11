@@ -12,10 +12,3 @@ logoBlur = false
 description='''
 Adds the Saiyans as a transformation for Alien Evo
 '''
-
-[[dependencies.saiyan]]
-modId = "palladium"
-mandatory = true
-versionRange = ""
-ordering = "NONE"
-side = "BOTH"
