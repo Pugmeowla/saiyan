@@ -6,12 +6,12 @@
     "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
     "texture": "saiyan:textures/models/aliens/alien_264/saiyan.png",
     "bones": {
-        "head": "Head",
-        "body": "Body",
-        "right_arm": "rightArm",
-        "left_arm": "leftArm",
-        "right_leg": "rightLeg",
-        "left_leg": "leftLeg"
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
 
     }},
   {
