@@ -14,6 +14,12 @@
   "allow_bar_shrinking": false,
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type":"tree",
+    "energy_bars": {
+   "base": {
+       "max": 1000,
+       "color": "#00FF00"
+   }
+},
   "abilities": {
     "saiyan_loop": {
       "type": "palladium:command",
@@ -475,6 +481,10 @@
         1
       ],
     "description": "null",
+    "energy_bar_usage": {
+   "energy_bar": "base",
+   "amount": 1000
+},
     "first_tick_commands": [],
     "last_tick_commands": [],
     "commands": [
@@ -490,10 +500,66 @@
     "needs_empty_hand": false,
     "allow_scrolling_when_crouching": true
 }
+                ],
+                "unlocking":[
+                  {
+      "type": "palladium:energy_bar",
+      "energy_bar": "base",
+      "min": 1000
+   
+}
                 ]
                
             }
+},
+ "charge":{
+    "type": "palladium:command",
+    "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+    "title": "Super Saiyan",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 2,
+ "gui_position": [
+        0,
+        1
+      ],
+    "description": "null",
+    "energy_bar_usage": {
+   "energy_bar": "base",
+   "amount": -2
+},
+    "first_tick_commands": [],
+    "last_tick_commands": [],
+    "commands": [
+       ""
+    ],
+     "conditions": {
+               
+               "enabling": [
+                  {
+    "type": "palladium:held",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
 }
+                ]
+               
+            }
+},
+ "charge2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "render_layer": "saiyan:charge",
+      "conditions":{
+        "enabling":[
+          {
+    "type": "palladium:ability_enabled",
+    "ability": "charge"
+}
+        ]
+      }
+    }
 
   }
 }
