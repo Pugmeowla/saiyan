@@ -2,6 +2,9 @@
     "objectives": [
         "Saiyan.XP",
         "Saiyan.Level",
-        "Saiyan.SkillPoint"
+        "Saiyan.SkillPoint",
+        "SSj1-g1.XP",
+        "SSj1-g1.Level",
+        "SSj1-g1.SkillPoint"
     ]
 }

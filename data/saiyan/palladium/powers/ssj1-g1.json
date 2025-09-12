@@ -1,0 +1,496 @@
+{
+  "name": {
+    "text": "ssj1-g1"
+  },
+  "icon": {
+    "type": "palladium:texture",
+    "texture": "#alienevo:alien_sel"
+  },
+  "persistent_data": true,
+  "hidden": true,
+  "background": "alienevo:textures/gui/power_screen/power_screen.png",
+  "primary_color": "#8ed721",
+  "secondary_color": "#332e27",
+  "allow_bar_shrinking": false,
+  "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
+  "gui_display_type":"tree",
+  "abilities": {
+    "saiyan_loop": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": {"translate":"species.alienevo_aliens.265"},
+      "icon": "#alienevo:alien_sel",
+      "gui_position": [
+        0,
+        0
+      ],
+      "first_tick_commands": [
+        "scoreboard objectives add Saiyan.XP dummy",
+        "scoreboard objectives add Saiyan.Level dummy",
+        "scoreboard objectives add Saiyan.SkillPoint dummy"
+      ],
+      "last_tick_commands": [],
+      "commands": [
+        "scoreboard players add @s[palladium.power=selfdestruct:prototype_omnitrix_sdm] AlienEvo.SelfDestruct 1"
+      ]
+    },
+    "hideBody": {
+      "type": "palladium:hide_body_part",
+      "icon": "minecraft:blaze_rod",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "affects_first_person": true,
+      "body_parts": [
+        "right_arm",
+        "left_arm",
+        "chest",
+        "chest_overlay",
+        "right_arm_overlay",
+        "left_arm_overlay",
+        "right_leg",
+        "left_leg",
+        "cape",
+        "right_leg_overlay",
+        "left_leg_overlay",
+        "head",
+        "head_overlay"
+      ]
+    },
+    "render_layer_base": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "render_layer": "saiyan:aliens/alien_265/ssj1-g1"
+    },
+    "base_form": {
+      "type": "alienevo:omnitrix_detransform",
+      "icon": "#alienevo:detransform",
+      "title": {"translate":"ability.alienevo.omnitrix.base_form"},
+      "hidden": true,
+       "hidden_in_bar": true,
+      "list_index": 4,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "key_type": "key_bind"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "AlienEvo.BaseForm"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "AlienEvo.MasterControl"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "timeout_function": {
+      "type": "alienevo:omnitrix_timer",
+      "hidden": true
+    },
+    "name_change": {
+      "type": "palladium:name_change",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "name": {
+        "translate": "species.alienevo_aliens.265"
+      },
+      "conditions": {
+        "enabling": [],
+        "unlocking": [
+          {
+            "type": "palladium:and",
+            "conditions": [
+              {
+                "type": "alienevo:current_alien_nickname",
+                "value": "species.alienevo_aliens.265"
+              },
+              {
+                "type": "palladium:not",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "alienevo.nickname"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "nickname": {
+      "type": "palladium:name_change",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "name": [
+        {
+          "nbt": "KubeJSPersistentData.alienevo_265",
+          "entity": "@s"
+        }
+      ],
+      "conditions": {
+        "enabling": [],
+        "unlocking": [
+          {
+            "type": "palladium:and",
+            "conditions": [
+              {
+                "type": "palladium:not",
+                "conditions": [
+                  {
+                    "type": "alienevo:current_alien_nickname",
+                    "value": "species.alienevo_aliens.265"
+                  }
+                ]
+              },
+              {
+                "type": "palladium:not",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "alienevo.nickname"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+"health": {
+  "type": "palladium:attribute_modifier",
+  "icon": "minecraft:iron_chestplate",
+  "title": "health",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "attribute": "minecraft:generic.max_health",
+  "amount": 8
+},
+"attack": {
+  "type": "palladium:attribute_modifier",
+  "icon": "minecraft:iron_sword",
+  "title": "attack",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "attribute": "minecraft:generic.attack_damage",
+  "amount": 0.5
+},
+"defence": {
+  "type": "palladium:attribute_modifier",
+  "icon": "minecraft:iron_chestplate",
+  "title": "defence",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "attribute": "minecraft:generic.armor",
+  "amount": 1.0
+},
+"toughness": {
+  "type": "palladium:attribute_modifier",
+  "icon": "minecraft:iron_chestplate",
+  "title": "toughness",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "attribute": "minecraft:generic.armor_toughness",
+  "amount": 0.5
+},
+"speed": {
+  "type": "palladium:attribute_modifier",
+  "icon": "minecraft:iron_boots",
+  "title": "speed",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "attribute": "minecraft:generic.movement_speed",
+  "amount": 0.036
+},
+"attack_speed": {
+  "type": "palladium:attribute_modifier",
+  "icon": "minecraft:golden_sword",
+  "title": "attack speed",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "attribute": "minecraft:generic.attack_speed",
+  "amount": 0.3
+},
+"zenkai":{
+    "type": "palladium:command",
+    "icon": "minecraft:command_block",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [],
+    "last_tick_commands": ["attribute @s minecraft:generic.max_health base set 20","scoreboard players set @s saiyan_cooldown 0"],
+    "commands": [
+      "execute as @s[tag=saiyan_cooldown] run execute if entity @s[tag=saiyan_cooldown] run scoreboard players add @s saiyan_cooldown 1",
+      "execute if score @s saiyan_cooldown matches 2400 run scoreboard players set @s saiyan_cooldown 1",
+      "execute if score @s saiyan_cooldown matches 1 run scoreboard players add @s zenkai 1",
+      "execute if entity @s[palladium.power=saiyan:saiyan] run execute as @a[scores={health=1..1}] run tag @s add saiyan_cooldown", 
+      "execute if entity @s[palladium.power=saiyan:saiyan] run execute as @a[tag=saiyan,scores={health=2..}] run tag @s remove saiyan_cooldown",
+      "execute if score @s zenkai matches 17 run scoreboard players set @s zenkai 16"
+    ]
+},
+"ssj_health": {
+  "type": "palladium:command",
+  "icon": "minecraft:command_block",
+  "title": "null",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "first_tick_commands": [
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.max_health base set 38",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.max_health base set 40",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.max_health base set 42",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.max_health base set 44",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.max_health base set 46",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.max_health base set 48",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.max_health base set 50",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.max_health base set 52",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.max_health base set 54",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.max_health base set 56",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.max_health base set 58",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.max_health base set 60",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.max_health base set 62",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.max_health base set 64",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.max_health base set 66",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.max_health base set 68"
+  ],
+  "last_tick_commands": ["attribute @s minecraft:generic.max_health base set 30"],
+  "commands": []
+},
+"ssj_attack": {
+  "type": "palladium:command",
+  "icon": "minecraft:command_block",
+  "title": "null",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "first_tick_commands": [
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.attack_damage base set 3.0",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.attack_damage base set 3.5",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.attack_damage base set 4.0",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.attack_damage base set 4.5",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.attack_damage base set 5.0",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.attack_damage base set 5.5",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.attack_damage base set 6.0",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.attack_damage base set 6.5",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.attack_damage base set 7.0",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.attack_damage base set 7.5",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.attack_damage base set 8.0",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.attack_damage base set 8.5",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.attack_damage base set 9.0",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.attack_damage base set 9.5",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.attack_damage base set 10.0",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.attack_damage base set 10.5"
+  ],
+  "last_tick_commands": ["attribute @s minecraft:generic.attack_damage base set 2.0"],
+  "commands": []
+},
+"ssj_defense": {
+  "type": "palladium:command",
+  "icon": "minecraft:command_block",
+  "title": "null",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "first_tick_commands": [
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor base set 3.0",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor base set 3.75",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor base set 4.5",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor base set 5.25",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor base set 6.0",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor base set 6.75",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor base set 7.5",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor base set 8.25",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor base set 9.0",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor base set 9.75",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor base set 10.5",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor base set 11.25",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor base set 12.0",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor base set 12.75",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor base set 13.5",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor base set 14.25",
+    
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor_toughness base set 3.0",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor_toughness base set 3.75",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor_toughness base set 4.5",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor_toughness base set 5.25",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor_toughness base set 6.0",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor_toughness base set 6.75",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor_toughness base set 7.5",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor_toughness base set 8.25",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor_toughness base set 9.0",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor_toughness base set 9.75",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor_toughness base set 10.5",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor_toughness base set 11.25",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor_toughness base set 12.0",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor_toughness base set 12.75",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor_toughness base set 13.5",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor_toughness base set 14.25"
+  ],
+  "last_tick_commands": [
+    "attribute @s minecraft:generic.armor base set 0",
+    "attribute @s minecraft:generic.armor_toughness base set 0"
+  ],
+  "commands": []
+},
+"ssj_speed": {
+  "type": "palladium:command",
+  "icon": "minecraft:command_block",
+  "title": "null",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "first_tick_commands": [
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.movement_speed base set 0.163",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.movement_speed base set 0.168",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.movement_speed base set 0.173",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.movement_speed base set 0.178",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.movement_speed base set 0.183",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.movement_speed base set 0.188",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.movement_speed base set 0.193",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.movement_speed base set 0.198",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.movement_speed base set 0.203",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.movement_speed base set 0.208",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.movement_speed base set 0.213",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.movement_speed base set 0.218",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.movement_speed base set 0.223",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.movement_speed base set 0.228",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.movement_speed base set 0.233",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.movement_speed base set 0.238"
+  ],
+  "last_tick_commands": ["attribute @s minecraft:generic.movement_speed base set 0.13"],
+  "commands": []
+},
+"flight": {
+            "type": "palladium:attribute_modifier",
+            "persistent_data": true,
+            "icon": "minecraft:feather",
+            "title": "Flight",
+            "bar_color": "yellow",
+            "description": "Gives you flight",
+            "attribute": "palladium:flight_speed",
+            "amount": 1,
+            "operation": 0,
+             "gui_position": [
+        -1,
+        1
+      ]
+                      },
+                        "base":{
+    "type": "palladium:command",
+    "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+    "title": "Base Form",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 4,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [],
+    "last_tick_commands": [],
+    "commands": [
+       "superpower replace saiyan:ssj1-g1 saiyan:saiyan"
+    ],
+     "conditions": {
+               
+               "enabling": [
+                   {
+    "type": "palladium:action",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+}
+                ]
+               
+            }
+},
+  "ssj2":{
+    "type": "palladium:command",
+    "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
+    "title": "Super Saiyan 2",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 3,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [],
+    "last_tick_commands": [],
+    "commands": [
+       "superpower replace saiyan:ssj1-g1 saiyan:ssj2"
+    ],
+     "conditions": {
+               
+               "enabling": [
+                   {
+    "type": "palladium:action",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+}
+                ]
+               
+            }
+}
+
+  }
+}

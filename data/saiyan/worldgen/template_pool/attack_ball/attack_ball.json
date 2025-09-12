@@ -1,0 +1,15 @@
+{
+    "name": "saiyan:attack_ball/attack_ball",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+        "element": {
+          "location": "saiyan:attack_ball/attack_ball",
+          "processors": "minecraft:empty",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+        }
+    ]
+}

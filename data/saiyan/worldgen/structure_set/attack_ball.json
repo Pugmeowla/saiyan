@@ -1,0 +1,16 @@
+{
+  "placement": {
+    "type": "minecraft:concentric_rings",
+    "count": 1,
+    "distance": 5,
+    "preferred_biomes": "#minecraft:is_overworld",
+    "salt": 69,
+    "spread": 1
+  },
+  "structures": [
+    {
+      "structure": "saiyan:attack_ball",
+      "weight": 1
+    }
+  ]
+}
