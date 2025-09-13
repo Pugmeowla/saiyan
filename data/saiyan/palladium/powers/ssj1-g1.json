@@ -14,6 +14,12 @@
   "allow_bar_shrinking": false,
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type":"tree",
+    "energy_bars": {
+   "ssj1-g1": {
+       "max": 2000,
+       "color": "#FFD700"
+   }
+},
   "abilities": {
     "saiyan_loop": {
       "type": "palladium:command",
@@ -487,10 +493,77 @@
     "needs_empty_hand": false,
     "allow_scrolling_when_crouching": true
 }
+                ],
+                  "unlocking":[
+                  {
+      "type": "palladium:energy_bar",
+      "energy_bar": "ssj1-g1",
+      "min": 2000
+   
+}
                 ]
                
             }
+},
+ "charge":{
+    "type": "palladium:command",
+    "icon": "minecraft:snowball",
+    "title": "Super Saiyan",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 3,
+ "gui_position": [
+        0,
+        1
+      ],
+    "description": "null",
+    "energy_bar_usage": {
+   "energy_bar": "ssj1-g1",
+   "amount": -5
+},
+    "first_tick_commands": ["effect give @s minecraft:slowness infinite 255 true"],
+    "last_tick_commands": ["effect clear @s minecraft:slowness"],
+    "commands": [
+       "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
+    ],
+     "conditions": {
+               
+               "enabling": [
+                  {
+    "type": "palladium:held",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
 }
+                ],
+                "unlocking":[
+                  {
+    "type": "palladium:not",
+    "conditions": [{
+      "type": "palladium:energy_bar",
+      "energy_bar": "ssj1-g1",
+      "min": 2000
+   
+}]
+}
+                ]
+               
+            }
+},
+ "charge2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "render_layer": "saiyan:charge-yellow",
+      "conditions":{
+        "enabling":[
+          {
+    "type": "palladium:ability_enabled",
+    "ability": "charge"
+}
+        ]
+      }
+    }
 
   }
 }

@@ -24,7 +24,8 @@
     "last_tick_commands": [],
     "commands": [
        "function saiyan:scan",
-       "clear @s saiyan:saiyan_hair 1"
+       "clear @s saiyan:saiyan_hair 1",
+       "alienautoadd @s saiyan:saiyan"
     ],
      "conditions": {
                
