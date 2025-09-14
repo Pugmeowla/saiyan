@@ -16,10 +16,10 @@
     }},
   {
     "type": "geckolib:default",
-    "model": "saiyan:geo/aliens/alien_264/base_hair.geo.json",
+    "model": "saiyan:geo/aliens/alien_264/ssj_hair.geo.json",
     "texture": "saiyan:textures/models/aliens/alien_265/ssj_hair.png",
     "bones": {
-        "head": "Head"
+        "head": "head"
     }},
        {
       "type": "geckolib:default",

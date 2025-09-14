@@ -14,6 +14,12 @@
   "allow_bar_shrinking": false,
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type":"tree",
+  "energy_bars": {
+   "ssj2": {
+       "max": 4000,
+       "color": "#FFD700"
+   }
+},
   "abilities": {
     "saiyan_loop": {
       "type": "palladium:command",
@@ -186,7 +192,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.max_health",
-  "amount": 8
+  "amount": 40
 },
 "attack": {
   "type": "palladium:attribute_modifier",
@@ -199,7 +205,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.attack_damage",
-  "amount": 0.5
+  "amount": 21
 },
 "defence": {
   "type": "palladium:attribute_modifier",
@@ -212,7 +218,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.armor",
-  "amount": 1.0
+  "amount": 20
 },
 "toughness": {
   "type": "palladium:attribute_modifier",
@@ -225,7 +231,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.armor_toughness",
-  "amount": 0.5
+  "amount": 12
 },
 "speed": {
   "type": "palladium:attribute_modifier",
@@ -251,7 +257,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.attack_speed",
-  "amount": 0.3
+  "amount": 0.6
 },
 "zenkai":{
     "type": "palladium:command",
@@ -274,7 +280,7 @@
       "execute if score @s zenkai matches 17 run scoreboard players set @s zenkai 16"
     ]
 },
-"ssj_health": {
+"zenkai_health_base": {
   "type": "palladium:command",
   "icon": "minecraft:command_block",
   "title": "null",
@@ -285,139 +291,83 @@
   "gui_position": "null",
   "description": "null",
   "first_tick_commands": [
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.max_health base set 38",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.max_health base set 40",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.max_health base set 42",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.max_health base set 44",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.max_health base set 46",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.max_health base set 48",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.max_health base set 50",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.max_health base set 52",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.max_health base set 54",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.max_health base set 56",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.max_health base set 58",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.max_health base set 60",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.max_health base set 62",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.max_health base set 64",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.max_health base set 66",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.max_health base set 68"
-  ],
-  "last_tick_commands": ["attribute @s minecraft:generic.max_health base set 30"],
-  "commands": []
-},
-"ssj_attack": {
-  "type": "palladium:command",
-  "icon": "minecraft:command_block",
-  "title": "null",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "gui_position": "null",
-  "description": "null",
-  "first_tick_commands": [
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.attack_damage base set 3.0",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.attack_damage base set 3.5",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.attack_damage base set 4.0",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.attack_damage base set 4.5",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.attack_damage base set 5.0",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.attack_damage base set 5.5",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.attack_damage base set 6.0",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.attack_damage base set 6.5",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.attack_damage base set 7.0",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.attack_damage base set 7.5",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.attack_damage base set 8.0",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.attack_damage base set 8.5",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.attack_damage base set 9.0",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.attack_damage base set 9.5",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.attack_damage base set 10.0",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.attack_damage base set 10.5"
-  ],
-  "last_tick_commands": ["attribute @s minecraft:generic.attack_damage base set 2.0"],
-  "commands": []
-},
-"ssj_defense": {
-  "type": "palladium:command",
-  "icon": "minecraft:command_block",
-  "title": "null",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "gui_position": "null",
-  "description": "null",
-  "first_tick_commands": [
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor base set 3.0",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor base set 3.75",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor base set 4.5",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor base set 5.25",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor base set 6.0",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor base set 6.75",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor base set 7.5",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor base set 8.25",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor base set 9.0",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor base set 9.75",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor base set 10.5",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor base set 11.25",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor base set 12.0",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor base set 12.75",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor base set 13.5",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor base set 14.25",
-    
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor_toughness base set 3.0",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor_toughness base set 3.75",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor_toughness base set 4.5",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor_toughness base set 5.25",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor_toughness base set 6.0",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor_toughness base set 6.75",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor_toughness base set 7.5",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor_toughness base set 8.25",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor_toughness base set 9.0",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor_toughness base set 9.75",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor_toughness base set 10.5",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor_toughness base set 11.25",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor_toughness base set 12.0",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor_toughness base set 12.75",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor_toughness base set 13.5",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor_toughness base set 14.25"
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.max_health base set 23",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.max_health base set 24",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.max_health base set 25",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.max_health base set 26",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.max_health base set 27",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.max_health base set 28",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.max_health base set 29",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.max_health base set 30",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.max_health base set 31",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.max_health base set 32",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.max_health base set 33",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.max_health base set 34",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.max_health base set 35",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.max_health base set 36",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.max_health base set 37",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.max_health base set 38",
+
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.attack_damage base set 2.1",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.attack_damage base set 2.2",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.attack_damage base set 2.3",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.attack_damage base set 2.4",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.attack_damage base set 2.5",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.attack_damage base set 2.6",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.attack_damage base set 2.7",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.attack_damage base set 2.8",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.attack_damage base set 2.9",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.attack_damage base set 3.0",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.attack_damage base set 3.1",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.attack_damage base set 3.2",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.attack_damage base set 3.3",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.attack_damage base set 3.4",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.attack_damage base set 3.5",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.attack_damage base set 3.6",
+
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor base set 1.0",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor base set 1.125",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor base set 1.25",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor base set 1.375",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor base set 1.5",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor base set 1.625",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor base set 1.75",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor base set 1.875",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor base set 2.0",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor base set 2.125",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor base set 2.25",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor base set 2.375",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor base set 2.5",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor base set 2.625",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor base set 2.75",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor base set 2.875",
+
+    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor_toughness base set 0.6",
+    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor_toughness base set 0.725",
+    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor_toughness base set 0.85",
+    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor_toughness base set 0.975",
+    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor_toughness base set 1.1",
+    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor_toughness base set 1.225",
+    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor_toughness base set 1.35",
+    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor_toughness base set 1.475",
+    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor_toughness base set 1.6",
+    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor_toughness base set 1.725",
+    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor_toughness base set 1.85",
+    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor_toughness base set 1.975",
+    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor_toughness base set 2.1",
+    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor_toughness base set 2.225",
+    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor_toughness base set 2.35",
+    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor_toughness base set 2.475"
   ],
   "last_tick_commands": [
+     "attribute @s minecraft:generic.max_health base set 20",
+    "attribute @s minecraft:generic.attack_damage base set 1",
     "attribute @s minecraft:generic.armor base set 0",
     "attribute @s minecraft:generic.armor_toughness base set 0"
   ],
   "commands": []
 },
-"ssj_speed": {
-  "type": "palladium:command",
-  "icon": "minecraft:command_block",
-  "title": "null",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "gui_position": "null",
-  "description": "null",
-  "first_tick_commands": [
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.movement_speed base set 0.163",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.movement_speed base set 0.168",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.movement_speed base set 0.173",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.movement_speed base set 0.178",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.movement_speed base set 0.183",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.movement_speed base set 0.188",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.movement_speed base set 0.193",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.movement_speed base set 0.198",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.movement_speed base set 0.203",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.movement_speed base set 0.208",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.movement_speed base set 0.213",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.movement_speed base set 0.218",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.movement_speed base set 0.223",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.movement_speed base set 0.228",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.movement_speed base set 0.233",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.movement_speed base set 0.238"
-  ],
-  "last_tick_commands": ["attribute @s minecraft:generic.movement_speed base set 0.13"],
-  "commands": []
-},
+
 "flight": {
             "type": "palladium:attribute_modifier",
             "persistent_data": true,
@@ -461,6 +411,124 @@
                 ]
                
             }
+},
+ "ssj3":{
+    "type": "palladium:command",
+    "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
+    "title": "Super Saiyan 2",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 3,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [],
+    "last_tick_commands": [],
+    "commands": [
+       "superpower replace saiyan:ssj2 saiyan:ssj3"
+    ],
+     "conditions": {
+               
+               "enabling": [
+                   {
+    "type": "palladium:action",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+}
+                ],
+                  "unlocking":[
+                  {
+      "type": "palladium:energy_bar",
+      "energy_bar": "ssj2",
+      "min": 4000
+   
+}
+                ]
+               
+            }
+},
+ "charge":{
+    "type": "palladium:command",
+    "icon": "minecraft:snowball",
+    "title": "Super Saiyan",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 3,
+ "gui_position": [
+        0,
+        1
+      ],
+    "description": "null",
+    "energy_bar_usage": {
+   "energy_bar": "ssj2",
+   "amount": -10
+},
+    "first_tick_commands": ["effect give @s minecraft:slowness infinite 255 true"],
+    "last_tick_commands": ["effect clear @s minecraft:slowness"],
+    "commands": [
+       "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
+    ],
+     "conditions": {
+               
+               "enabling": [
+                  {
+    "type": "palladium:held",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
+}
+                ],
+                "unlocking":[
+                  {
+    "type": "palladium:not",
+    "conditions": [{
+      "type": "palladium:energy_bar",
+      "energy_bar": "ssj2",
+      "min": 4000
+   
+}]
+}
+                ]
+               
+            }
+},
+ "charge2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "render_layer": "saiyan:charge-yellow",
+      "conditions":{
+        "enabling":[
+          {
+    "type": "palladium:ability_enabled",
+    "ability": "charge"
+}
+        ]
+      }
+    },
+     "fall_damage" :{
+    "type": "palladium:damage_immunity",
+    "icon": "minecraft:potion",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "damage_sources": [
+        "minecraft:is_fall"
+    ],
+    "conditions":{
+        "enabling":[
+          {
+    "type": "palladium:ability_enabled",
+    "ability": "flight"
+}
+        ]
+      }
 }
 
   }

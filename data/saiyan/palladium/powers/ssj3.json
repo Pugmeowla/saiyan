@@ -14,9 +14,9 @@
   "allow_bar_shrinking": false,
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type":"tree",
-    "energy_bars": {
-   "ssj1-g1": {
-       "max": 2000,
+  "energy_bars": {
+   "ssj2": {
+       "max": 4000,
        "color": "#FFD700"
    }
 },
@@ -66,7 +66,7 @@
     "render_layer_base": {
       "type": "palladium:render_layer",
       "hidden": true,
-      "render_layer": "saiyan:aliens/alien_265/ssj1-g1"
+      "render_layer": "saiyan:aliens/alien_265/ssj3"
     },
     "base_form": {
       "type": "alienevo:omnitrix_detransform",
@@ -192,7 +192,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.max_health",
-  "amount": 12
+  "amount": 120
 },
 "attack": {
   "type": "palladium:attribute_modifier",
@@ -205,7 +205,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.attack_damage",
-  "amount": 10
+  "amount": 42
 },
 "defence": {
   "type": "palladium:attribute_modifier",
@@ -218,7 +218,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.armor",
-  "amount": 11
+  "amount": 40
 },
 "toughness": {
   "type": "palladium:attribute_modifier",
@@ -231,7 +231,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.armor_toughness",
-  "amount": 6
+  "amount": 24
 },
 "speed": {
   "type": "palladium:attribute_modifier",
@@ -257,7 +257,7 @@
   "gui_position": "null",
   "description": "null",
   "attribute": "minecraft:generic.attack_speed",
-  "amount": 0.3
+  "amount": 0.6
 },
 "zenkai":{
     "type": "palladium:command",
@@ -368,7 +368,6 @@
   "commands": []
 },
 
-
 "flight": {
             "type": "palladium:attribute_modifier",
             "persistent_data": true,
@@ -384,10 +383,10 @@
         1
       ]
                       },
-                        "base":{
+                        "ssj2":{
     "type": "palladium:command",
-    "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
-    "title": "Base Form",
+    "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+    "title": "Super Saiyan",
     "bar_color": "light_gray",
     "hidden": false,
     "hidden_in_bar": false,
@@ -397,7 +396,7 @@
     "first_tick_commands": [],
     "last_tick_commands": [],
     "commands": [
-       "superpower replace saiyan:ssj1-g1 saiyan:saiyan"
+       "superpower replace saiyan:ssj3 saiyan:ssj2"
     ],
      "conditions": {
                
@@ -413,7 +412,7 @@
                
             }
 },
-  "ssj2":{
+ "ssj3":{
     "type": "palladium:command",
     "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
     "title": "Super Saiyan 2",
@@ -426,7 +425,7 @@
     "first_tick_commands": [],
     "last_tick_commands": [],
     "commands": [
-       "superpower replace saiyan:ssj1-g1 saiyan:ssj2"
+       "superpower replace saiyan:ssj2 saiyan:ssj3"
     ],
      "conditions": {
                
@@ -442,8 +441,8 @@
                   "unlocking":[
                   {
       "type": "palladium:energy_bar",
-      "energy_bar": "ssj1-g1",
-      "min": 2000
+      "energy_bar": "ssj2",
+      "min": 4000
    
 }
                 ]
@@ -464,7 +463,7 @@
       ],
     "description": "null",
     "energy_bar_usage": {
-   "energy_bar": "ssj1-g1",
+   "energy_bar": "ssj2",
    "amount": -10
 },
     "first_tick_commands": ["effect give @s minecraft:slowness infinite 255 true"],
@@ -487,8 +486,8 @@
     "type": "palladium:not",
     "conditions": [{
       "type": "palladium:energy_bar",
-      "energy_bar": "ssj1-g1",
-      "min": 2000
+      "energy_bar": "ssj2",
+      "min": 4000
    
 }]
 }
