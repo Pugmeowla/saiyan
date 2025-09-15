@@ -1,0 +1,7 @@
+{
+  "model_type": "palladium:basic",
+  "model_layer": "saiyan:ki-blast_left",
+    "texture": {
+      "base":  "saiyan:textures/models/ki_blast.png"
+        }
+}

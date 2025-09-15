@@ -112,7 +112,13 @@
                 "tag": "AlienEvo.MasterControl"
               }
             ]
-          }
+          },
+           {
+    "type": "palladium:not",
+    "conditions": [{
+    "type": "palladium:crouching"
+}]
+}
         ]
       }
     },
@@ -287,6 +293,19 @@
     "attribute": "minecraft:generic.movement_speed",
     "amount": 0.018
 },
+"attack_speed": {
+  "type": "palladium:attribute_modifier",
+  "icon": "minecraft:golden_sword",
+  "title": "attack speed",
+  "bar_color": "light_gray",
+  "hidden": true,
+  "hidden_in_bar": true,
+  "list_index": -1,
+  "gui_position": "null",
+  "description": "null",
+  "attribute": "minecraft:generic.attack_speed",
+  "amount": 5
+},
 "zenkai":{
     "type": "palladium:command",
     "icon": "minecraft:command_block",
@@ -395,10 +414,10 @@
   ],
   "commands": []
 },
-
 "flight": {
             "type": "palladium:attribute_modifier",
             "persistent_data": true,
+                "hidden": true,
             "icon": "minecraft:feather",
             "title": "Flight",
             "bar_color": "yellow",
@@ -409,20 +428,314 @@
              "gui_position": [
         -1,
         1
-      ]
+      ],
+      "conditions":{
+        "unlocking":[
+          {
+    "type": "palladium:has_tag",
+    "tag": "flight"
+}
+        ]
+      }
                       },
+    "ssj1-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 1",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+      "gui_position": [
+        0,
+        1
+      ],
+      "first_tick_commands": ["tag @s add ssj1-g1"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "saiyan_loop"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj1-g2-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 1 - Grade 2",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+     "gui_position": [
+        0.5,
+        0.5
+      ],
+      "first_tick_commands": ["tag @s add ssj1-g2"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj1-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+        "ssj1-g3-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 1 - Grade 3",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+      "gui_position": [
+        1,
+        1
+      ],
+      "first_tick_commands": ["tag @s add ssj1-g3"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj1-g2-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+            "ssj1-fp-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 1 Full Power",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+      "gui_position": [
+        1.5,
+        1.5
+      ],
+      "first_tick_commands": ["tag @s add ssj1-g4"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj1-g3-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj2-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 2",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
+      "gui_position": [
+        0,
+        2
+      ],
+      "first_tick_commands": ["tag @s add ssj2"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj1-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj3-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 3",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
+      "gui_position": [
+        0,
+        3
+      ],
+      "first_tick_commands": ["tag @s add ssj3"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj2-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "flight-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Flight",
+      "icon": "minecraft:feather",
+      "gui_position": [
+        -0.5,
+        0.5
+      ],
+      "first_tick_commands": ["tag @s add flight"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "saiyan_loop"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 2,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ki-blast-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Ki-Blast",
+      "icon": "minecraft:snowball",
+      "gui_position": [
+        -1,
+        1
+      ],
+      "first_tick_commands": ["tag @s add ki-blast"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "flight-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 2,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "kamehameha-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Kamehameha",
+      "icon": "minecraft:end_rod",
+      "gui_position": [
+        -1.5,
+        1.5
+      ],
+      "first_tick_commands": ["tag @s add kamehameha"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ki-blast-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 2,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+        "kaioken-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Kaio-Ken",
+      "icon": "minecraft:end_rod",
+      "gui_position": [
+        -1.5,
+        2.5
+      ],
+      "first_tick_commands": ["tag @s add kaioken"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions":{
+        "unlocking":[
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "kamehameha-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 2,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
                       "ssj1":{
     "type": "palladium:command",
     "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
     "title": "Super Saiyan",
     "bar_color": "light_gray",
-    "hidden": false,
+    "hidden": true,
     "hidden_in_bar": false,
     "list_index": 3,
- "gui_position": [
-        0,
-        1
-      ],
     "description": "null",
     "energy_bar_usage": {
    "energy_bar": "base",
@@ -450,7 +763,17 @@
       "energy_bar": "base",
       "min": 1000
    
+},{
+    "type": "palladium:not",
+    "conditions": [{
+    "type": "palladium:crouching"
+}]
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "ssj1-g1"
 }
+
                 ]
                
             }
@@ -460,13 +783,9 @@
     "icon": "minecraft:snowball",
     "title": "Super Saiyan",
     "bar_color": "light_gray",
-    "hidden": false,
+    "hidden": true,
     "hidden_in_bar": false,
     "list_index": 3,
- "gui_position": [
-        0,
-        1
-      ],
     "description": "null",
     "energy_bar_usage": {
    "energy_bar": "base",
@@ -519,8 +838,8 @@
     "icon": "minecraft:potion",
     "title": "null",
     "bar_color": "light_gray",
-    "hidden": false,
-    "hidden_in_bar": false,
+    "hidden": true,
+    "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
     "description": "null",
@@ -535,7 +854,211 @@
 }
         ]
       }
+},
+    "block_abil": {
+      "type": "palladium:animation_timer",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": {"translate":"ability.alienevo_aliens.6.block"},
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 250,
+            "needs_empty_hand": false,
+            "key_type": "right_click"
+          }
+        ]
+      }
+    },
+        "defense_armor_block": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.armor",
+      "uuid": "0aa467a9-dc8c-4373-9f44-8e0bbdae0db5",
+      "hidden": true,
+      "amount": 60,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "block_abil"
+          }
+        ]
+      }
+    },
+        "defense_armor_damage": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.attack_damage",
+      "uuid": "66a3a9dc-f8d3-4720-b871-baada6abe8dc",
+      "hidden": true,
+      "amount": -7,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "block_abil"
+          }
+        ]
+      }
+    },
+        "slowness_block": {
+      "type": "palladium:command",
+      "hidden": true,
+      "commands": [
+        "effect give @s minecraft:slowness 1 2 true",
+          "effect give @s minecraft:resistance 1 1 true"
+      ],
+      "last_tick_commands": [
+        "effect clear @s minecraft:slowness"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "block_abil"
+          }
+        ]
+      }
+    },
+        "show_arms": {
+      "type": "palladium:show_both_arms",
+      "hidden": true,
+      "hidden_in_bar": true,
+        "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "block_abil"
+          }
+        ]
+      }
+    },
+        "ki-blast-aim": {
+      "type": "palladium:aim",
+          "list_index": 0,
+      "hidden": true,
+      "hidden_in_bar": false,
+          "energy_bar_usage": {
+   "energy_bar": "base",
+   "amount": 1
+},
+      "time": 4,
+      "arm": "both",
+      "conditions": {
+        "enabling": [
+         {
+    "type": "palladium:held",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+     "conditions":{
+        "unlocking":[
+          {
+    "type": "palladium:has_tag",
+    "tag": "ki-blast"
+}
+        ]
+      }
 }
 
+          
+        ]
+      }
+    },
+     "diamond_shards_base": {
+      "type": "alienevo:custom_projectile",
+      "entity_type": "palladium:custom_projectile",
+      "hidden": true,
+      "swinging_arm": "none",
+      "speed": 2,
+        "align_velocity_with_calculated_rotation": true,
+ "yaw_inaccuracy": 3,
+      "pitch_inaccuracy": 3,
+      "entity_data": {
+        "Damage": 7,
+        "Gravity": 0,
+        "Size": 1.5,
+        "Lifetime": 100,
+        "CommandOnEntityHit": "",
+        "CommandOnBlockHit": "",
+        "DieOnEntityHit": true,
+        "DieOnBlockHit": true,
+        "Appearances": [
+          {
+            "Type": "renderLayer",
+            "RenderLayer": "saiyan:ki-blast_right"
+          }
+        ]
+      },
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "ki-blast-aim"
+          },
+            {
+            "type": "palladium:interval",
+            "active_ticks": 0,
+            "disabled_ticks": 1
+          }
+        ]
+      }
+    },
+            "show_arms2": {
+      "type": "palladium:show_both_arms",
+      "hidden": true,
+      "hidden_in_bar": true,
+        "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "ki-blast-aim"
+          }
+        ]
+      }
+    },
+    
+     "diamond_shards_base2": {
+      "type": "alienevo:custom_projectile",
+      "entity_type": "palladium:custom_projectile",
+      "hidden": true,
+      "swinging_arm": "none",
+      "speed": 2,
+        "align_velocity_with_calculated_rotation": true,
+      "yaw_inaccuracy": 3,
+      "pitch_inaccuracy": 3,
+      "entity_data": {
+        "Damage": 7,
+        "Gravity": 0,
+        "Size": 1.5,
+        "Lifetime": 100,
+        "CommandOnEntityHit": "",
+        "CommandOnBlockHit": "",
+        "DieOnEntityHit": true,
+        "DieOnBlockHit": true,
+        "Appearances": [
+          {
+            "Type": "renderLayer",
+            "RenderLayer": "saiyan:ki-blast_left"
+          }
+        ]
+      },
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "ki-blast-aim"
+          },
+            {
+            "type": "palladium:interval",
+            "active_ticks": 0,
+            "disabled_ticks": 1
+          }
+        ]
+      }
+    }
   }
 }

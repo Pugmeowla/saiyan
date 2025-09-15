@@ -372,6 +372,7 @@
 "flight": {
             "type": "palladium:attribute_modifier",
             "persistent_data": true,
+                "hidden": true,
             "icon": "minecraft:feather",
             "title": "Flight",
             "bar_color": "yellow",
@@ -382,7 +383,15 @@
              "gui_position": [
         -1,
         1
-      ]
+      ],
+      "conditions":{
+        "unlocking":[
+          {
+    "type": "palladium:has_tag",
+    "tag": "flight"
+}
+        ]
+      }
                       },
                         "base":{
     "type": "palladium:command",
@@ -445,6 +454,10 @@
       "energy_bar": "ssj1-g1",
       "min": 2000
    
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "ssj2"
 }
                 ]
                
@@ -530,7 +543,75 @@
 }
         ]
       }
-}
+},
+    "block_abil": {
+      "type": "palladium:animation_timer",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": {"translate":"ability.alienevo_aliens.6.block"},
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 250,
+            "needs_empty_hand": false,
+            "key_type": "right_click"
+          }
+        ]
+      }
+    },
+        "defense_armor_block": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.armor",
+      "uuid": "0aa467a9-dc8c-4373-9f44-8e0bbdae0db5",
+      "hidden": true,
+      "amount": 60,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "block_abil"
+          }
+        ]
+      }
+    },
+        "defense_armor_damage": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.attack_damage",
+      "uuid": "66a3a9dc-f8d3-4720-b871-baada6abe8dc",
+      "hidden": true,
+      "amount": -7,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "block_abil"
+          }
+        ]
+      }
+    },
+        "slowness_block": {
+      "type": "palladium:command",
+      "hidden": true,
+      "commands": [
+        "effect give @s minecraft:slowness 1 2 true",
+          "effect give @s minecraft:resistance 1 1 true"
+      ],
+      "last_tick_commands": [
+        "effect clear @s minecraft:slowness"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "block_abil"
+          }
+        ]
+      }
+    }
 
   }
 }
