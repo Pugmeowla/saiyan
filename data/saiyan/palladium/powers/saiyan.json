@@ -1028,8 +1028,8 @@
       "swinging_arm": "none",
       "speed": 2,
         "align_velocity_with_calculated_rotation": true,
-      "yaw_inaccuracy": 3,
-      "pitch_inaccuracy": 3,
+      "yaw_inaccuracy": 1,
+      "pitch_inaccuracy": 1,
       "entity_data": {
         "Damage": 7,
         "Gravity": 0,
