@@ -2,5 +2,11 @@
     "icon": "saiyan:saiyan_hair",
     "title": "Saiyan",
     "items": [
+        "saiyan:music_disc_ultimate_battle",
+        "saiyan:music_disc_makafushigi_adventure",
+        "saiyan:music_disc_dragon_soul",
+        "saiyan:music_disc_dan_dan_kokoro_hikareteku",
+        "saiyan:music_disc_chouzetsu_dynamic",
+        "saiyan:music_disc_cha_la_head_cha_la"
     ]
 }
