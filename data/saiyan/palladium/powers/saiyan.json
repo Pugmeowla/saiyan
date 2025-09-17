@@ -13,23 +13,20 @@
   "secondary_color": "#332e27",
   "allow_bar_shrinking": false,
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
-  "gui_display_type":"tree",
-    "energy_bars": {
-   "base": {
-       "max": 1000,
-       "color": "#00FF00"
-   }
-},
+  "gui_display_type": "tree",
+  "energy_bars": {
+    "base": {
+      "max": 1000,
+      "color": "#00FF00"
+    }
+  },
   "abilities": {
     "saiyan_loop": {
       "type": "palladium:command",
       "hidden": false,
-      "title": {"translate":"species.alienevo_aliens.264"},
+      "title": { "translate": "species.alienevo_aliens.264" },
       "icon": "#alienevo:alien_sel",
-      "gui_position": [
-        0,
-        0
-      ],
+      "gui_position": [0, 0],
       "first_tick_commands": [
         "scoreboard objectives add Saiyan.XP dummy",
         "scoreboard objectives add Saiyan.Level dummy",
@@ -67,38 +64,37 @@
       "type": "palladium:render_layer",
       "hidden": true,
       "render_layer": "saiyan:aliens/alien_264/saiyan",
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
-    "type": "palladium:not",
-    "conditions": [
-     
-{
-    "type": "palladium:has_tag",
-    "tag": "kaioken_on"
-}
-]
-}
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "kaioken_on"
+              }
+            ]
+          }
         ]
       }
     },
-"render_layer_kaioken": {
+    "render_layer_kaioken": {
       "type": "palladium:render_layer",
       "hidden": true,
       "render_layer": "saiyan:aliens/alien_264/base_kaioken",
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
-    "type": "palladium:has_tag",
-    "tag": "kaioken_on"
-}
+            "type": "palladium:has_tag",
+            "tag": "kaioken_on"
+          }
         ]
       }
     },
     "base_form": {
       "type": "alienevo:omnitrix_detransform",
       "icon": "#alienevo:detransform",
-      "title": {"translate":"ability.alienevo.omnitrix.base_form"},
+      "title": { "translate": "ability.alienevo.omnitrix.base_form" },
       "hidden": true,
       "list_index": 4,
       "conditions": {
@@ -122,12 +118,14 @@
               }
             ]
           },
-           {
-    "type": "palladium:not",
-    "conditions": [{
-    "type": "palladium:crouching"
-}]
-}
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:crouching"
+              }
+            ]
+          }
         ]
       }
     },
@@ -213,254 +211,251 @@
         ]
       }
     },
-"health":{
-    "type": "palladium:attribute_modifier",
-    "icon": "minecraft:iron_chestplate",
-    "title": "health",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "attribute": "minecraft:generic.max_health",
-    "amount": 10,
-     "conditions":{
-      "unlocking":[
-        {
-    "type": "palladium:objective_score",
-    "objective": "zenkai",
-    "min_score": 0,
-    "max_score": 0
-},
+    "health": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:iron_chestplate",
+      "title": "health",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "attribute": "minecraft:generic.max_health",
+      "amount": 10,
+      "conditions": {
+        "unlocking": [
           {
-    "type": "palladium:not",
-    "conditions": [
-     
-{
-    "type": "palladium:or",
-    "conditions": [ {
-    "type": "palladium:has_tag",
-    "tag": "ssj"
-}
-]
-}
-]
-}
-      ]
-    }
-},
- "attack":{
-    "type": "palladium:attribute_modifier",
-    "icon": "minecraft:iron_chestplate",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "attribute": "minecraft:generic.attack_damage",
-    "amount": 1
-},
- "defence":{
-    "type": "palladium:attribute_modifier",
-    "icon": "minecraft:iron_chestplate",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "attribute": "minecraft:generic.armor",
-    "amount": 2
-},
- "toughness":{
-    "type": "palladium:attribute_modifier",
-    "icon": "minecraft:iron_chestplate",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "attribute": "minecraft:generic.armor_toughness",
-    "amount": 1
-},
- "speed":{
-    "type": "palladium:attribute_modifier",
-    "icon": "minecraft:iron_chestplate",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "attribute": "minecraft:generic.movement_speed",
-    "amount": 0.018
-},
-"attack_speed": {
-  "type": "palladium:attribute_modifier",
-  "icon": "minecraft:golden_sword",
-  "title": "attack speed",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "gui_position": "null",
-  "description": "null",
-  "attribute": "minecraft:generic.attack_speed",
-  "amount": 5
-},
-"zenkai":{
-    "type": "palladium:command",
-    "icon": "minecraft:command_block",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "first_tick_commands": [""],
-    "last_tick_commands": ["attribute @s minecraft:generic.max_health base set 20","scoreboard players set @s saiyan_cooldown 0"],
-    "commands": [
-      "execute as @s[tag=saiyan_cooldown] run execute if entity @s[tag=saiyan_cooldown] run scoreboard players add @s saiyan_cooldown 1",
-      "execute if score @s saiyan_cooldown matches 2400 run scoreboard players set @s saiyan_cooldown 1",
-      "execute if score @s saiyan_cooldown matches 1 run scoreboard players add @s zenkai 1",
-      "execute if entity @s[palladium.power=saiyan:saiyan] run execute as @a[scores={health=1..1}] run tag @s add saiyan_cooldown", 
-      "execute if entity @s[palladium.power=saiyan:saiyan] run execute as @a[tag=saiyan,scores={health=2..}] run tag @s remove saiyan_cooldown",
-      "execute if score @s zenkai matches 17 run scoreboard players set @s zenkai 16"
-    ]
-},
-"zenkai_health_base": {
-  "type": "palladium:command",
-  "icon": "minecraft:command_block",
-  "title": "null",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "gui_position": "null",
-  "description": "null",
-  "first_tick_commands": [
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.max_health base set 23",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.max_health base set 24",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.max_health base set 25",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.max_health base set 26",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.max_health base set 27",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.max_health base set 28",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.max_health base set 29",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.max_health base set 30",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.max_health base set 31",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.max_health base set 32",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.max_health base set 33",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.max_health base set 34",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.max_health base set 35",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.max_health base set 36",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.max_health base set 37",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.max_health base set 38",
-
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.attack_damage base set 2.1",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.attack_damage base set 2.2",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.attack_damage base set 2.3",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.attack_damage base set 2.4",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.attack_damage base set 2.5",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.attack_damage base set 2.6",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.attack_damage base set 2.7",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.attack_damage base set 2.8",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.attack_damage base set 2.9",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.attack_damage base set 3.0",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.attack_damage base set 3.1",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.attack_damage base set 3.2",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.attack_damage base set 3.3",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.attack_damage base set 3.4",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.attack_damage base set 3.5",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.attack_damage base set 3.6",
-
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor base set 1.0",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor base set 1.125",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor base set 1.25",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor base set 1.375",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor base set 1.5",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor base set 1.625",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor base set 1.75",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor base set 1.875",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor base set 2.0",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor base set 2.125",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor base set 2.25",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor base set 2.375",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor base set 2.5",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor base set 2.625",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor base set 2.75",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor base set 2.875",
-
-    "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor_toughness base set 0.6",
-    "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor_toughness base set 0.725",
-    "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor_toughness base set 0.85",
-    "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor_toughness base set 0.975",
-    "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor_toughness base set 1.1",
-    "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor_toughness base set 1.225",
-    "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor_toughness base set 1.35",
-    "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor_toughness base set 1.475",
-    "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor_toughness base set 1.6",
-    "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor_toughness base set 1.725",
-    "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor_toughness base set 1.85",
-    "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor_toughness base set 1.975",
-    "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor_toughness base set 2.1",
-    "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor_toughness base set 2.225",
-    "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor_toughness base set 2.35",
-    "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor_toughness base set 2.475"
-  ],
-  "last_tick_commands": [
-     "attribute @s minecraft:generic.max_health base set 20",
-    "attribute @s minecraft:generic.attack_damage base set 1",
-    "attribute @s minecraft:generic.armor base set 0",
-    "attribute @s minecraft:generic.armor_toughness base set 0"
-  ],
-  "commands": []
-},
-"flight": {
-            "type": "palladium:attribute_modifier",
-            "persistent_data": true,
-                "hidden": true,
-            "icon": "minecraft:feather",
-            "title": "Flight",
-            "bar_color": "yellow",
-            "description": "Gives you flight",
-            "attribute": "palladium:flight_speed",
-            "amount": 1,
-            "operation": 0,
-             "gui_position": [
-        -1,
-        1
-      ],
-      "conditions":{
-        "unlocking":[
+            "type": "palladium:objective_score",
+            "objective": "zenkai",
+            "min_score": 0,
+            "max_score": 0
+          },
           {
-    "type": "palladium:has_tag",
-    "tag": "flight"
-}
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ssj"
+                  }
+                ]
+              }
+            ]
+          }
         ]
       }
-                      },
+    },
+    "attack": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:iron_chestplate",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 1
+    },
+    "defence": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:iron_chestplate",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "attribute": "minecraft:generic.armor",
+      "amount": 2
+    },
+    "toughness": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:iron_chestplate",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "attribute": "minecraft:generic.armor_toughness",
+      "amount": 1
+    },
+    "speed": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:iron_chestplate",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": 0.018
+    },
+    "attack_speed": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:golden_sword",
+      "title": "attack speed",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "attribute": "minecraft:generic.attack_speed",
+      "amount": 5
+    },
+    "zenkai": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [""],
+      "last_tick_commands": [
+        "attribute @s minecraft:generic.max_health base set 20",
+        "scoreboard players set @s saiyan_cooldown 0"
+      ],
+      "commands": [
+        "execute as @s[tag=saiyan_cooldown] run execute if entity @s[tag=saiyan_cooldown] run scoreboard players add @s saiyan_cooldown 1",
+        "execute if score @s saiyan_cooldown matches 2400 run scoreboard players set @s saiyan_cooldown 1",
+        "execute if score @s saiyan_cooldown matches 1 run scoreboard players add @s zenkai 1",
+        "execute if entity @s[palladium.power=saiyan:saiyan] run execute as @a[scores={health=1..1}] run tag @s add saiyan_cooldown",
+        "execute if entity @s[palladium.power=saiyan:saiyan] run execute as @a[tag=saiyan,scores={health=2..}] run tag @s remove saiyan_cooldown",
+        "execute if score @s zenkai matches 17 run scoreboard players set @s zenkai 16"
+      ]
+    },
+    "zenkai_health_base": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.max_health base set 23",
+        "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.max_health base set 24",
+        "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.max_health base set 25",
+        "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.max_health base set 26",
+        "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.max_health base set 27",
+        "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.max_health base set 28",
+        "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.max_health base set 29",
+        "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.max_health base set 30",
+        "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.max_health base set 31",
+        "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.max_health base set 32",
+        "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.max_health base set 33",
+        "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.max_health base set 34",
+        "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.max_health base set 35",
+        "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.max_health base set 36",
+        "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.max_health base set 37",
+        "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.max_health base set 38",
+
+        "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.attack_damage base set 2.1",
+        "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.attack_damage base set 2.2",
+        "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.attack_damage base set 2.3",
+        "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.attack_damage base set 2.4",
+        "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.attack_damage base set 2.5",
+        "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.attack_damage base set 2.6",
+        "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.attack_damage base set 2.7",
+        "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.attack_damage base set 2.8",
+        "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.attack_damage base set 2.9",
+        "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.attack_damage base set 3.0",
+        "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.attack_damage base set 3.1",
+        "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.attack_damage base set 3.2",
+        "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.attack_damage base set 3.3",
+        "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.attack_damage base set 3.4",
+        "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.attack_damage base set 3.5",
+        "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.attack_damage base set 3.6",
+
+        "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor base set 1.0",
+        "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor base set 1.125",
+        "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor base set 1.25",
+        "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor base set 1.375",
+        "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor base set 1.5",
+        "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor base set 1.625",
+        "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor base set 1.75",
+        "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor base set 1.875",
+        "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor base set 2.0",
+        "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor base set 2.125",
+        "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor base set 2.25",
+        "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor base set 2.375",
+        "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor base set 2.5",
+        "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor base set 2.625",
+        "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor base set 2.75",
+        "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor base set 2.875",
+
+        "execute if score @s zenkai matches 1 run attribute @s minecraft:generic.armor_toughness base set 0.6",
+        "execute if score @s zenkai matches 2 run attribute @s minecraft:generic.armor_toughness base set 0.725",
+        "execute if score @s zenkai matches 3 run attribute @s minecraft:generic.armor_toughness base set 0.85",
+        "execute if score @s zenkai matches 4 run attribute @s minecraft:generic.armor_toughness base set 0.975",
+        "execute if score @s zenkai matches 5 run attribute @s minecraft:generic.armor_toughness base set 1.1",
+        "execute if score @s zenkai matches 6 run attribute @s minecraft:generic.armor_toughness base set 1.225",
+        "execute if score @s zenkai matches 7 run attribute @s minecraft:generic.armor_toughness base set 1.35",
+        "execute if score @s zenkai matches 8 run attribute @s minecraft:generic.armor_toughness base set 1.475",
+        "execute if score @s zenkai matches 9 run attribute @s minecraft:generic.armor_toughness base set 1.6",
+        "execute if score @s zenkai matches 10 run attribute @s minecraft:generic.armor_toughness base set 1.725",
+        "execute if score @s zenkai matches 11 run attribute @s minecraft:generic.armor_toughness base set 1.85",
+        "execute if score @s zenkai matches 12 run attribute @s minecraft:generic.armor_toughness base set 1.975",
+        "execute if score @s zenkai matches 13 run attribute @s minecraft:generic.armor_toughness base set 2.1",
+        "execute if score @s zenkai matches 14 run attribute @s minecraft:generic.armor_toughness base set 2.225",
+        "execute if score @s zenkai matches 15 run attribute @s minecraft:generic.armor_toughness base set 2.35",
+        "execute if score @s zenkai matches 16 run attribute @s minecraft:generic.armor_toughness base set 2.475"
+      ],
+      "last_tick_commands": [
+        "attribute @s minecraft:generic.max_health base set 20",
+        "attribute @s minecraft:generic.attack_damage base set 1",
+        "attribute @s minecraft:generic.armor base set 0",
+        "attribute @s minecraft:generic.armor_toughness base set 0"
+      ],
+      "commands": []
+    },
+    "flight": {
+      "type": "palladium:attribute_modifier",
+      "persistent_data": true,
+      "hidden": true,
+      "icon": "minecraft:feather",
+      "title": "Flight",
+      "bar_color": "yellow",
+      "description": "Gives you flight",
+      "attribute": "palladium:flight_speed",
+      "amount": 1,
+      "operation": 0,
+      "gui_position": [-1, 1],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "flight"
+          }
+        ]
+      }
+    },
     "ssj1-dummy": {
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "gui_position": [
-        0,
-        1
-      ],
+      "gui_position": [0, 1],
       "first_tick_commands": ["tag @s add ssj1-g1"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -481,15 +476,12 @@
       "hidden": false,
       "title": "Super Saiyan 1 - Grade 2",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-     "gui_position": [
-        0.5,
-        0.5
-      ],
+      "gui_position": [0.5, 0.5],
       "first_tick_commands": ["tag @s add ssj1-g2"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -505,20 +497,17 @@
         ]
       }
     },
-        "ssj1-g3-dummy": {
+    "ssj1-g3-dummy": {
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1 - Grade 3",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "gui_position": [
-        1,
-        1
-      ],
+      "gui_position": [1, 1],
       "first_tick_commands": ["tag @s add ssj1-g3"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -534,20 +523,17 @@
         ]
       }
     },
-            "ssj1-fp-dummy": {
+    "ssj1-fp-dummy": {
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1 Full Power",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "gui_position": [
-        1.5,
-        1.5
-      ],
+      "gui_position": [1.5, 1.5],
       "first_tick_commands": ["tag @s add ssj1-g4"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -568,15 +554,12 @@
       "hidden": false,
       "title": "Super Saiyan 2",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
-      "gui_position": [
-        0,
-        2
-      ],
+      "gui_position": [0, 2],
       "first_tick_commands": ["tag @s add ssj2"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -597,15 +580,12 @@
       "hidden": false,
       "title": "Super Saiyan 3",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
-      "gui_position": [
-        0,
-        3
-      ],
+      "gui_position": [0, 3],
       "first_tick_commands": ["tag @s add ssj3"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -626,15 +606,12 @@
       "hidden": false,
       "title": "Flight",
       "icon": "minecraft:feather",
-      "gui_position": [
-        -0.5,
-        0.5
-      ],
+      "gui_position": [-0.5, 0.5],
       "first_tick_commands": ["tag @s add flight"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -655,15 +632,12 @@
       "hidden": false,
       "title": "Ki-Blast",
       "icon": "minecraft:snowball",
-      "gui_position": [
-        -1,
-        1
-      ],
+      "gui_position": [-1, 1],
       "first_tick_commands": ["tag @s add ki-blast"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -684,15 +658,12 @@
       "hidden": false,
       "title": "Kamehameha",
       "icon": "minecraft:end_rod",
-      "gui_position": [
-        -1.5,
-        1.5
-      ],
+      "gui_position": [-1.5, 1.5],
       "first_tick_commands": ["tag @s add kamehameha"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -708,20 +679,17 @@
         ]
       }
     },
-        "kaioken-dummy": {
+    "kaioken-dummy": {
       "type": "palladium:command",
       "hidden": false,
       "title": "Kaio-Ken",
       "icon": "minecraft:end_rod",
-      "gui_position": [
-        -1.5,
-        2.5
-      ],
+      "gui_position": [-1.5, 2.5],
       "first_tick_commands": ["tag @s add kaioken"],
       "last_tick_commands": [],
       "commands": [],
-      "conditions":{
-        "unlocking":[
+      "conditions": {
+        "unlocking": [
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -737,139 +705,135 @@
         ]
       }
     },
-                      "ssj1":{
-    "type": "palladium:command",
-    "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-    "title": "Super Saiyan",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 3,
-    "description": "null",
-    "energy_bar_usage": {
-   "energy_bar": "base",
-   "amount": 1000
-},
-    "first_tick_commands": [],
-    "last_tick_commands": [],
-    "commands": [
-       "superpower replace saiyan:saiyan saiyan:ssj1-g1"
-    ],
-     "conditions": {
-               
-               "enabling": [
-                   {
-    "type": "palladium:action",
-    "cooldown": 0,
-    "key_type": "key_bind",
-    "needs_empty_hand": false,
-    "allow_scrolling_when_crouching": true
-}
-                ],
-                "unlocking":[
-                  {
-      "type": "palladium:energy_bar",
-      "energy_bar": "base",
-      "min": 1000
-   
-},{
-    "type": "palladium:not",
-    "conditions": [{
-    "type": "palladium:crouching"
-}]
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "ssj1-g1"
-}
-
-                ]
-               
-            }
-},
- "charge":{
-    "type": "palladium:command",
-    "icon": "minecraft:snowball",
-    "title": "Super Saiyan",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 3,
-    "description": "null",
-    "energy_bar_usage": {
-   "energy_bar": "base",
-   "amount": -10
-},
-    "first_tick_commands": ["effect give @s minecraft:slowness infinite 255 true"],
-    "last_tick_commands": ["effect clear @s minecraft:slowness"],
-    "commands": [
-       "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
-    ],
-     "conditions": {
-               
-               "enabling": [
-                  {
-    "type": "palladium:held",
-    "cooldown": 0,
-    "key_type": "key_bind",
-    "needs_empty_hand": false
-}
-                ],
-                "unlocking":[
-                    {
-    "type": "palladium:not",
-    "conditions": [{
-      "type": "palladium:energy_bar",
-      "energy_bar": "base",
-      "min": 1000
-   
-}]
-}
-                ]
-               
-            }
-},
- "charge2": {
-      "type": "palladium:render_layer",
+    "ssj1": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+      "title": "Super Saiyan",
+      "bar_color": "light_gray",
       "hidden": true,
-      "render_layer": "saiyan:charge",
-      "conditions":{
-        "enabling":[
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 1000
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["superpower replace saiyan:saiyan saiyan:ssj1-g1"],
+      "conditions": {
+        "enabling": [
           {
-    "type": "palladium:ability_enabled",
-    "ability": "charge"
-}
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 1000
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:crouching"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "ssj1-g1"
+          }
         ]
       }
     },
-   "fall_damage" :{
-    "type": "palladium:damage_immunity",
-    "icon": "minecraft:potion",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "damage_sources": [
-        "minecraft:is_fall"
-    ],
-    "conditions":{
-        "enabling":[
+    "charge": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "Super Saiyan",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": -10
+      },
+      "first_tick_commands": [
+        "effect give @s minecraft:slowness infinite 255 true"
+      ],
+      "last_tick_commands": ["effect clear @s minecraft:slowness"],
+      "commands": [
+        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
+      ],
+      "conditions": {
+        "enabling": [
           {
-    "type": "palladium:ability_enabled",
-    "ability": "flight"
-}
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:energy_bar",
+                "energy_bar": "base",
+                "min": 1000
+              }
+            ]
+          }
         ]
       }
-},
+    },
+    "charge2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "render_layer": "saiyan:charge",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "charge"
+          }
+        ]
+      }
+    },
+    "fall_damage": {
+      "type": "palladium:damage_immunity",
+      "icon": "minecraft:potion",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "damage_sources": ["minecraft:is_fall"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "flight"
+          }
+        ]
+      }
+    },
     "block_abil": {
       "type": "palladium:animation_timer",
       "list_index": 1,
       "max_value": 5,
       "bar_color": "orange",
-      "title": {"translate":"ability.alienevo_aliens.6.block"},
+      "title": { "translate": "ability.alienevo_aliens.6.block" },
       "hidden": true,
       "hidden_in_bar": true,
       "conditions": {
@@ -883,7 +847,7 @@
         ]
       }
     },
-        "defense_armor_block": {
+    "defense_armor_block": {
       "type": "palladium:attribute_modifier",
       "attribute": "minecraft:generic.armor",
       "uuid": "0aa467a9-dc8c-4373-9f44-8e0bbdae0db5",
@@ -898,7 +862,7 @@
         ]
       }
     },
-        "defense_armor_damage": {
+    "defense_armor_damage": {
       "type": "palladium:attribute_modifier",
       "attribute": "minecraft:generic.attack_damage",
       "uuid": "66a3a9dc-f8d3-4720-b871-baada6abe8dc",
@@ -913,16 +877,14 @@
         ]
       }
     },
-        "slowness_block": {
+    "slowness_block": {
       "type": "palladium:command",
       "hidden": true,
       "commands": [
         "effect give @s minecraft:slowness 1 2 true",
-          "effect give @s minecraft:resistance 1 1 true"
+        "effect give @s minecraft:resistance 1 1 true"
       ],
-      "last_tick_commands": [
-        "effect clear @s minecraft:slowness"
-      ],
+      "last_tick_commands": ["effect clear @s minecraft:slowness"],
       "conditions": {
         "enabling": [
           {
@@ -932,11 +894,11 @@
         ]
       }
     },
-        "show_arms": {
+    "show_arms": {
       "type": "palladium:show_both_arms",
       "hidden": true,
       "hidden_in_bar": true,
-        "conditions": {
+      "conditions": {
         "enabling": [
           {
             "type": "palladium:ability_enabled",
@@ -945,46 +907,44 @@
         ]
       }
     },
-        "ki-blast-aim": {
+    "ki-blast-aim": {
       "type": "palladium:aim",
-          "list_index": 0,
+      "list_index": 0,
       "hidden": true,
       "hidden_in_bar": false,
-          "energy_bar_usage": {
-   "energy_bar": "base",
-   "amount": 1
-},
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 1
+      },
       "time": 4,
       "arm": "both",
       "conditions": {
         "enabling": [
-         {
-    "type": "palladium:held",
-    "cooldown": 0,
-    "key_type": "key_bind",
-    "needs_empty_hand": false,
-     "conditions":{
-        "unlocking":[
           {
-    "type": "palladium:has_tag",
-    "tag": "ki-blast"
-}
-        ]
-      }
-}
-
-          
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "conditions": {
+              "unlocking": [
+                {
+                  "type": "palladium:has_tag",
+                  "tag": "ki-blast"
+                }
+              ]
+            }
+          }
         ]
       }
     },
-     "diamond_shards_base": {
+    "diamond_shards_base": {
       "type": "alienevo:custom_projectile",
       "entity_type": "palladium:custom_projectile",
       "hidden": true,
       "swinging_arm": "none",
       "speed": 2,
-        "align_velocity_with_calculated_rotation": true,
- "yaw_inaccuracy": 3,
+      "align_velocity_with_calculated_rotation": true,
+      "yaw_inaccuracy": 3,
       "pitch_inaccuracy": 3,
       "entity_data": {
         "Damage": 7,
@@ -1008,7 +968,7 @@
             "type": "palladium:ability_enabled",
             "ability": "ki-blast-aim"
           },
-            {
+          {
             "type": "palladium:interval",
             "active_ticks": 0,
             "disabled_ticks": 1
@@ -1016,11 +976,11 @@
         ]
       }
     },
-            "show_arms2": {
+    "show_arms2": {
       "type": "palladium:show_both_arms",
       "hidden": true,
       "hidden_in_bar": true,
-        "conditions": {
+      "conditions": {
         "enabling": [
           {
             "type": "palladium:ability_enabled",
@@ -1029,13 +989,13 @@
         ]
       }
     },
-     "diamond_shards_base2": {
+    "diamond_shards_base2": {
       "type": "alienevo:custom_projectile",
       "entity_type": "palladium:custom_projectile",
       "hidden": true,
       "swinging_arm": "none",
       "speed": 2,
-        "align_velocity_with_calculated_rotation": true,
+      "align_velocity_with_calculated_rotation": true,
       "yaw_inaccuracy": 1,
       "pitch_inaccuracy": 1,
       "entity_data": {
@@ -1060,7 +1020,7 @@
             "type": "palladium:ability_enabled",
             "ability": "ki-blast-aim"
           },
-            {
+          {
             "type": "palladium:interval",
             "active_ticks": 0,
             "disabled_ticks": 1
@@ -1068,273 +1028,263 @@
         ]
       }
     },
-     "kaioken": {
+    "kaioken": {
       "type": "palladium:render_layer",
       "hidden": true,
       "render_layer": "saiyan:charge-red",
-      "conditions":{
-        "enabling":[
-         {
-    "type": "palladium:has_tag",
-    "tag": "kaioken_on"
-}
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken_on"
+          }
         ]
       }
     },
-
- "kaioken2":{
-    "type": "palladium:command",
-    "icon": "minecraft:snowball",
-    "title": "Super Saiyan",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 3,
-    "description": "null",
-    "first_tick_commands": [],
-    "last_tick_commands": [],
-    "commands": [
-       "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
-    ],
-     "conditions": {
-               
-               "enabling": [
-                 {
-    "type": "palladium:has_tag",
-    "tag": "kaioken_on"
-}
-                ],
-                "unlocking":[
-                   
-                ]
-               
-            }
-},
- "remove_kaioken":{
-    "type": "palladium:command",
-    "icon": "minecraft:snowball",
-    "title": "remove_kaioken",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "description": "null",
-    "first_tick_commands": [],
-    "last_tick_commands": ["tag @s remove kaioken_on","effect clear @s minecraft:strength"],
-    "commands": [
-       
-    ],
-     "conditions": {
-               
-               "enabling": [
-{
-    "type": "palladium:toggle",
-    "cooldown": 0,
-    "key_type": "key_bind",
-    "needs_empty_hand": false,
-    "allow_scrolling_when_crouching": true
-}
-                ],
-                "unlocking":[
-                   
-                ]
-               
-            }
-},
-"kaiokenx2_button": {
-  "type": "palladium:command",
-  "icon": "minecraft:snowball",
-  "title": "Kaioken ×2",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "description": "null",
-  "first_tick_commands": [
-    "tag @s add kaioken_on",
-    "effect give @s minecraft:strength infinite 0 true"
-  ],
-  "last_tick_commands": [
-    "tag @s remove kaioken_on",
-    "effect clear @s minecraft:strength"
-  ],
-  "commands": [],
-  "conditions": {
-    "enabling": [
-      {
-        "type": "palladium:toggle",
-        "cooldown": 0,
-        "key_type": "key_bind",
-        "needs_empty_hand": false,
-        "allow_scrolling_when_crouching": true
+    "kaioken2": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "Super Saiyan",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken_on"
+          }
+        ],
+        "unlocking": []
       }
-    ],
-    "unlocking": []
-  }
-},
-"kaiokenx3_button": {
-  "type": "palladium:command",
-  "icon": "minecraft:snowball",
-  "title": "Kaioken ×3",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "description": "null",
-  "first_tick_commands": [
-    "tag @s add kaioken_on",
-    "effect give @s minecraft:strength infinite 1 true"
-  ],
-  "last_tick_commands": [
-    "tag @s remove kaioken_on",
-    "effect clear @s minecraft:strength"
-  ],
-  "commands": [],
-  "conditions": {
-    "enabling": [
-      {
-        "type": "palladium:toggle",
-        "cooldown": 0,
-        "key_type": "key_bind",
-        "needs_empty_hand": false,
-        "allow_scrolling_when_crouching": true
+    },
+    "remove_kaioken": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "remove_kaioken",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [
+        "tag @s remove kaioken_on",
+        "effect clear @s minecraft:strength"
+      ],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": []
       }
-    ],
-    "unlocking": []
-  }
-},
-"kaiokenx4_button": {
-  "type": "palladium:command",
-  "icon": "minecraft:snowball",
-  "title": "Kaioken ×4",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "description": "null",
-  "first_tick_commands": [
-    "tag @s add kaioken_on",
-    "effect give @s minecraft:strength infinite 2 true"
-  ],
-  "last_tick_commands": [
-    "tag @s remove kaioken_on",
-    "effect clear @s minecraft:strength"
-  ],
-  "commands": [],
-  "conditions": {
-    "enabling": [
-      {
-        "type": "palladium:toggle",
-        "cooldown": 0,
-        "key_type": "key_bind",
-        "needs_empty_hand": false,
-        "allow_scrolling_when_crouching": true
+    },
+    "kaiokenx2_button": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "Kaioken ×2",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [
+        "tag @s add kaioken_on",
+        "effect give @s minecraft:strength infinite 0 true"
+      ],
+      "last_tick_commands": [
+        "tag @s remove kaioken_on",
+        "effect clear @s minecraft:strength"
+      ],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": []
       }
-    ],
-    "unlocking": []
-  }
-},
-"kaiokenx10_button": {
-  "type": "palladium:command",
-  "icon": "minecraft:snowball",
-  "title": "Kaioken ×10",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "description": "null",
-  "first_tick_commands": [
-    "tag @s add kaioken_on",
-    "effect give @s minecraft:strength infinite 8 true"
-  ],
-  "last_tick_commands": [
-    "tag @s remove kaioken_on",
-    "effect clear @s minecraft:strength"
-  ],
-  "commands": [],
-  "conditions": {
-    "enabling": [
-      {
-        "type": "palladium:toggle",
-        "cooldown": 0,
-        "key_type": "key_bind",
-        "needs_empty_hand": false,
-        "allow_scrolling_when_crouching": true
+    },
+    "kaiokenx3_button": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "Kaioken ×3",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [
+        "tag @s add kaioken_on",
+        "effect give @s minecraft:strength infinite 1 true"
+      ],
+      "last_tick_commands": [
+        "tag @s remove kaioken_on",
+        "effect clear @s minecraft:strength"
+      ],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": []
       }
-    ],
-    "unlocking": []
-  }
-},
-"kaiokenx20_button": {
-  "type": "palladium:command",
-  "icon": "minecraft:snowball",
-  "title": "Kaioken ×20",
-  "bar_color": "light_gray",
-  "hidden": true,
-  "hidden_in_bar": true,
-  "list_index": -1,
-  "description": "null",
-  "first_tick_commands": [
-    "tag @s add kaioken_on",
-    "effect give @s minecraft:strength infinite 12 true"
-  ],
-  "last_tick_commands": [
-    "tag @s remove kaioken_on",
-    "effect clear @s minecraft:strength"
-  ],
-  "commands": [],
-  "conditions": {
-    "enabling": [
-      {
-        "type": "palladium:toggle",
-        "cooldown": 0,
-        "key_type": "key_bind",
-        "needs_empty_hand": false,
-        "allow_scrolling_when_crouching": true
+    },
+    "kaiokenx4_button": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "Kaioken ×4",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [
+        "tag @s add kaioken_on",
+        "effect give @s minecraft:strength infinite 2 true"
+      ],
+      "last_tick_commands": [
+        "tag @s remove kaioken_on",
+        "effect clear @s minecraft:strength"
+      ],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": []
       }
-    ],
-    "unlocking": []
-  }
-},
-"kaioken_wheel":{
-    "type": "palladium:ability_wheel",
-    "icon": "minecraft:blaze_rod",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 2,
-    "gui_position": "null",
-    "description": "null",
-    "abilities": [
-      "remove_kaioken",
+    },
+    "kaiokenx10_button": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "Kaioken ×10",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [
+        "tag @s add kaioken_on",
+        "effect give @s minecraft:strength infinite 8 true"
+      ],
+      "last_tick_commands": [
+        "tag @s remove kaioken_on",
+        "effect clear @s minecraft:strength"
+      ],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": []
+      }
+    },
+    "kaiokenx20_button": {
+      "type": "palladium:command",
+      "icon": "minecraft:snowball",
+      "title": "Kaioken ×20",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [
+        "tag @s add kaioken_on",
+        "effect give @s minecraft:strength infinite 12 true"
+      ],
+      "last_tick_commands": [
+        "tag @s remove kaioken_on",
+        "effect clear @s minecraft:strength"
+      ],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": []
+      }
+    },
+    "kaioken_wheel": {
+      "type": "palladium:ability_wheel",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 2,
+      "gui_position": "null",
+      "description": "null",
+      "abilities": [
+        "remove_kaioken",
         "kaiokenx2_button",
         "kaiokenx3_button",
         "kaiokenx4_button",
         "kaiokenx10_button",
-      "kaiokenx20_button"
-    ],
-    "texture": "null",
-    "disable_mouse_scrolling": false,
-    "disable_center_icon": false,
-    "conditions": {
-               
-               "enabling": [
-{
-    "type": "palladium:held",
-    "cooldown": 0,
-    "key_type": "key_bind",
-    "needs_empty_hand": false
-}
-                ],
-                "unlocking":[
-                   {
-    "type": "palladium:crouching"
-}
-                ]
-               
-            }
-}
-
+        "kaiokenx20_button"
+      ],
+      "texture": "null",
+      "disable_mouse_scrolling": false,
+      "disable_center_icon": false,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken"
+          }
+        ]
+      }
+    }
   }
 }
