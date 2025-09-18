@@ -1,13 +1,13 @@
 {
-    "type": "geckolib:default",
-    "model": "saiyan:geo/charge.geo.json",
-    "texture": "saiyan:textures/models/charge-red.png",
-    "bones": {
-        "head": "head",
-        "body": "body",
-        "right_arm": "right_arm",
-        "left_arm": "left_arm",
-        "right_leg": "right_leg",
-        "left_leg": "left_leg"
-    }
+  "type": "geckolib:default",
+  "model": "saiyan:geo/kaioken_charge.geo.json",
+  "texture": "saiyan:textures/models/charge-red.png",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
 }
