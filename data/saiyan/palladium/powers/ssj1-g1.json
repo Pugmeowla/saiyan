@@ -17,6 +17,8 @@
   "energy_bars": {
     "ssj1-g1": {
       "max": 2000,
+      "auto_increase_per_tick": 5,
+      "auto_increase_interval": 1,
       "color": "#FFD700"
     }
   },
@@ -466,7 +468,7 @@
           {
             "type": "palladium:energy_bar",
             "energy_bar": "ssj1-g1",
-            "min": 2000
+            "min": 1990
           },
           {
             "type": "palladium:has_tag",
@@ -487,7 +489,7 @@
       "description": "null",
       "energy_bar_usage": {
         "energy_bar": "ssj1-g1",
-        "amount": -10
+        "amount": -20
       },
       "first_tick_commands": [
         "effect give @s minecraft:slowness infinite 255 true"
@@ -512,7 +514,7 @@
               {
                 "type": "palladium:energy_bar",
                 "energy_bar": "ssj1-g1",
-                "min": 2000
+                "min": 1990
               }
             ]
           }
@@ -537,7 +539,7 @@
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
-        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
+        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 1 force"
       ],
       "conditions": {
         "enabling": [],
@@ -894,8 +896,8 @@
       "hidden": true,
       "hidden_in_bar": false,
       "energy_bar_usage": {
-        "energy_bar": "base",
-        "amount": 1
+        "energy_bar": "ssj1-g1",
+        "amount": 10
       },
       "time": 4,
       "arm": "both",
@@ -1008,6 +1010,66 @@
           }
         ]
       }
+    },
+    "drain": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "ssj1-g1",
+        "amount": 2
+      }
+    },
+    "force_base": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["superpower replace saiyan:ssj1-g1 saiyan:saiyan"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "ssj1-g1",
+            "min": 0,
+            "max": 4
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "cooldown"
+          }
+        ]
+      }
+    },
+    "force_base_cooldown": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "tag @s add cooldown2",
+        "schedule function saiyan:cooldown 3s"
+      ],
+      "last_tick_commands": ["tag @s remove cooldown"],
+      "commands": []
     }
   }
 }

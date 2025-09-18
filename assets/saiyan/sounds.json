@@ -1,50 +1,66 @@
 {
-    "music.cha_la_head_cha_la": {
-        "sounds": [
-            {
-                "name": "saiyan:cha_la_head_cha_la",
-                "stream": true
-            }
-        ]
-    },
-    "music.dan_dan_kokoro_hikareteku": {
-        "sounds": [
-            {
-                "name": "saiyan:dan_dan_kokoro_hikareteku",
-                "stream": true
-            }
-        ]
-    },
-      "music.makafushigi_adventure": {
-        "sounds": [
-            {
-                "name": "saiyan:makafushigi_adventure",
-                "stream": true
-            }
-        ]
-    },  
-      "music.ultimate_battle": {
-        "sounds": [
-            {
-                "name": "saiyan:ultimate_battle",
-                "stream": true
-            }
-        ]
-    }, 
-          "music.chouzetsu_dynamic": {
-        "sounds": [
-            {
-                "name": "saiyan:chouzetsu_dynamic",
-                "stream": true
-            }
-        ]
-    },  
-          "music.dragon_soul": {
-        "sounds": [
-            {
-                "name": "saiyan:dragon_soul",
-                "stream": true
-            }
-        ]
-    }
+  "music.cha_la_head_cha_la": {
+    "sounds": [
+      {
+        "name": "saiyan:cha_la_head_cha_la",
+        "stream": true
+      }
+    ]
+  },
+  "music.dan_dan_kokoro_hikareteku": {
+    "sounds": [
+      {
+        "name": "saiyan:dan_dan_kokoro_hikareteku",
+        "stream": true
+      }
+    ]
+  },
+  "music.makafushigi_adventure": {
+    "sounds": [
+      {
+        "name": "saiyan:makafushigi_adventure",
+        "stream": true
+      }
+    ]
+  },
+  "music.ultimate_battle": {
+    "sounds": [
+      {
+        "name": "saiyan:ultimate_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.chouzetsu_dynamic": {
+    "sounds": [
+      {
+        "name": "saiyan:chouzetsu_dynamic",
+        "stream": true
+      }
+    ]
+  },
+  "music.dragon_soul": {
+    "sounds": [
+      {
+        "name": "saiyan:dragon_soul",
+        "stream": true
+      }
+    ]
+  },
+  "ssj": {
+    "sounds": [
+      {
+        "name": "saiyan:ssj",
+        "stream": true
+      }
+    ]
+  },
+  "ssj2": {
+    "sounds": [
+      {
+        "name": "saiyan:ssj2",
+        "stream": true
+      }
+    ]
+  }
 }

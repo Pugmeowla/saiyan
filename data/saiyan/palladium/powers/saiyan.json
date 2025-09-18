@@ -17,6 +17,8 @@
   "energy_bars": {
     "base": {
       "max": 1000,
+      "auto_increase_per_tick": 1,
+      "auto_increase_interval": 1,
       "color": "#00FF00"
     }
   },
@@ -590,6 +592,32 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "ssj2-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj4-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 4",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
+      "gui_position": [0, 4],
+      "first_tick_commands": ["tag @s add ssj4"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj3-dummy"
           },
           {
             "type": "palladium:scoreboard_score_buyable",
@@ -1369,6 +1397,23 @@
       "commands": [
         "execute if entity @s[tag=ssj1-g4] run tag @s remove ssj1-g1"
       ]
+    },
+    "force_base_cooldown": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "tag @s add cooldown2",
+        "schedule function saiyan:cooldown 3s"
+      ],
+      "last_tick_commands": ["tag @s remove cooldown"],
+      "commands": []
     }
   }
 }
