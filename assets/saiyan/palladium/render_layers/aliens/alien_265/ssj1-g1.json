@@ -1,27 +1,36 @@
 {
-    "type": "palladium:compound",
+  "type": "palladium:compound",
   "layers": [
-  {
-    "type": "geckolib:default",
-    "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
-    "texture": "saiyan:textures/models/aliens/alien_265/ssj.png",
-    "bones": {
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_265/ssj.png",
+      "bones": {
         "head": "head",
         "body": "body",
         "right_arm": "right_arm",
         "left_arm": "left_arm",
         "right_leg": "right_leg",
         "left_leg": "left_leg"
-
-    }},
-  {
-    "type": "geckolib:default",
-    "model": "saiyan:geo/aliens/alien_264/ssj_hair.geo.json",
-    "texture": "saiyan:textures/models/aliens/alien_265/ssj_hair.png",
-    "bones": {
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/aliens/alien_264/ssj_hair.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_265/ssj_hair.png",
+      "bones": {
         "head": "head"
-    }},
-       {
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/tail.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_265/ssj_hair.png",
+      "bones": {
+        "body": "body"
+      }
+    },
+    {
       "type": "geckolib:default",
       "model": {
         "base": "saiyan:geo/aliens/alien_264/badge.geo.json",
@@ -34,8 +43,6 @@
       },
       "texture": {
         "base": "alienevo:textures/models/badge/badge_prototype.png"
-       
-       
       }
     },
     {

@@ -24,6 +24,14 @@
     },
     {
       "type": "geckolib:default",
+      "model": "saiyan:geo/tail.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_265/ssj_hair.png",
+      "bones": {
+        "body": "body"
+      }
+    },
+    {
+      "type": "geckolib:default",
       "model": {
         "base": "saiyan:geo/aliens/alien_264/badge.geo.json",
         "variables": {

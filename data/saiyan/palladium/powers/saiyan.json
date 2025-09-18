@@ -763,7 +763,7 @@
     },
     "ssj1-g4": {
       "type": "palladium:command",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_268.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": true,
