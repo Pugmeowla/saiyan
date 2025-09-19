@@ -924,6 +924,20 @@
         "enabling": [],
         "unlocking": []
       }
+    },
+    "sound": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["playsound saiyan:ssj2 player @s"],
+      "last_tick_commands": ["stopsound @s"],
+      "commands": []
     }
   }
 }

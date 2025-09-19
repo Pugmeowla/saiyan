@@ -62,5 +62,13 @@
         "stream": true
       }
     ]
+  },
+  "powerdown": {
+    "sounds": [
+      {
+        "name": "saiyan:powerdown",
+        "stream": true
+      }
+    ]
   }
 }

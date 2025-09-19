@@ -852,7 +852,7 @@
         "unlocking": []
       }
     },
-    "kaioken_wheel": {
+    "change_wheel": {
       "type": "palladium:ability_wheel",
       "icon": "minecraft:blaze_rod",
       "title": "null",
@@ -868,7 +868,8 @@
         "kaiokenx3_button",
         "kaiokenx4_button",
         "kaiokenx10_button",
-        "kaiokenx20_button"
+        "kaiokenx20_button",
+        "ssj1-g2"
       ],
       "texture": "null",
       "disable_mouse_scrolling": false,
@@ -1070,6 +1071,43 @@
       ],
       "last_tick_commands": ["tag @s remove cooldown"],
       "commands": []
+    },
+    "sound": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["playsound saiyan:ssj player @s"],
+      "last_tick_commands": ["stopsound @s", "playsound saiyan:ssj player @s"],
+      "commands": []
+    },
+    "ssj1-g2": {
+      "type": "palladium:size",
+      "icon": "minecraft:obsidian",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "scale": 1.2,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ]
+      }
     }
   }
 }
