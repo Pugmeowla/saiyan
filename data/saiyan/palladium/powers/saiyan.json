@@ -119,14 +119,6 @@
                 "tag": "AlienEvo.MasterControl"
               }
             ]
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:crouching"
-              }
-            ]
           }
         ]
       }
@@ -447,12 +439,69 @@
         ]
       }
     },
+    "ape-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Controlled Great Ape",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ape.png",
+      "gui_position": [0.5, 1],
+      "first_tick_commands": ["tag @s add ape"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "saiyan_loop"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "golden_ape-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Golden Great Ape",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/golden_ape.png",
+      "gui_position": [1, 1.5],
+      "first_tick_commands": ["tag @s add golden_ape"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ape-dummy"
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj1-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
     "ssj1-dummy": {
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "gui_position": [0, 1],
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g1.png",
+      "gui_position": [2, 0.5],
       "first_tick_commands": ["tag @s add ssj1-g1"],
       "last_tick_commands": [],
       "commands": [],
@@ -467,7 +516,7 @@
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
-            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
           }
         ]
@@ -477,8 +526,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1 - Grade 2",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "gui_position": [0.5, 0.5],
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g1.png",
+      "gui_position": [1.5, 2],
       "first_tick_commands": ["tag @s add ssj1-g2"],
       "last_tick_commands": [],
       "commands": [],
@@ -493,7 +542,7 @@
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
-            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
           }
         ]
@@ -503,8 +552,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1 - Grade 3",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "gui_position": [1, 1],
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g1.png",
+      "gui_position": [1.5, 3],
       "first_tick_commands": ["tag @s add ssj1-g3"],
       "last_tick_commands": [],
       "commands": [],
@@ -519,7 +568,7 @@
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
-            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
           }
         ]
@@ -529,8 +578,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1 Full Power",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "gui_position": [1.5, 1.5],
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g4.png",
+      "gui_position": [2.5, 2],
       "first_tick_commands": ["tag @s add ssj1-g4"],
       "last_tick_commands": [],
       "commands": [],
@@ -545,7 +594,7 @@
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
-            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
           }
         ]
@@ -555,8 +604,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 2",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
-      "gui_position": [0, 2],
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj2.png",
+      "gui_position": [3.5, 1.5],
       "first_tick_commands": ["tag @s add ssj2"],
       "last_tick_commands": [],
       "commands": [],
@@ -571,7 +620,33 @@
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
-            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_266.png",
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj2-fp-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 2 Full Power",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj2-fp.png",
+      "gui_position": [3, 2.5],
+      "first_tick_commands": ["tag @s add ssj2-fp"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj2-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
           }
         ]
@@ -581,8 +656,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 3",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
-      "gui_position": [0, 3],
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj3.png",
+      "gui_position": [3.5, 3],
       "first_tick_commands": ["tag @s add ssj3"],
       "last_tick_commands": [],
       "commands": [],
@@ -597,19 +672,19 @@
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
-            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
           }
         ]
       }
     },
-    "ssj4-dummy": {
+    "ssj3-fp-dummy": {
       "type": "palladium:command",
       "hidden": false,
-      "title": "Super Saiyan 4",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
-      "gui_position": [0, 4],
-      "first_tick_commands": ["tag @s add ssj4"],
+      "title": "Super Saiyan 3 Full Power",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj3-fp.png",
+      "gui_position": [3, 3.5],
+      "first_tick_commands": ["tag @s add ssj3-fp"],
       "last_tick_commands": [],
       "commands": [],
       "conditions": {
@@ -623,7 +698,246 @@
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
-            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_267.png",
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj4-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 4",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj4.png",
+      "gui_position": [1, 4],
+      "first_tick_commands": ["tag @s add ssj4"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj3-dummy"
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "golden_ape-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj4-fp-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan 4 Full Power",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj4.png",
+      "gui_position": [1, 5],
+      "first_tick_commands": ["tag @s add ssj4-fp"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj4-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj_god-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan God",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj_god.png",
+      "gui_position": [-1.5, 0.5],
+      "first_tick_commands": ["tag @s add ssj_god"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "saiyan_loop"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj_blue-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan Blue",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj_blue.png",
+      "gui_position": [-1.5, 2],
+      "first_tick_commands": ["tag @s add ssj_blue"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj_god-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ssj_blue_evo-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Super Saiyan Blue Evolution",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj_blue_evo.png",
+      "gui_position": [-1.5, 3],
+      "first_tick_commands": ["tag @s add ssj_blue_evo"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj_blue-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ui_sign-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Ultra Instinct Sign",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ui_sign.png",
+      "gui_position": [-3, 1.5],
+      "first_tick_commands": ["tag @s add ui_sign"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj_god-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ui_perfect-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Perfect Ultra Instinct",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ui_perfect.png",
+      "gui_position": [-3.5, 2],
+      "first_tick_commands": ["tag @s add ui_perfect"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ui_sign-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ui_true-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "True Ultra Instinct",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ui_true.png",
+      "gui_position": [-2.5, 2],
+      "first_tick_commands": ["tag @s add ui_true"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ui_sign-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "ue-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Ultra Ego",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ue.png",
+      "gui_position": [-1, 1.5],
+      "first_tick_commands": ["tag @s add ue"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj_god-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 5,
+            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
           }
         ]
@@ -634,7 +948,7 @@
       "hidden": false,
       "title": "Flight",
       "icon": "minecraft:feather",
-      "gui_position": [-0.5, 0.5],
+      "gui_position": [-0.5, -1.5],
       "first_tick_commands": ["tag @s add flight"],
       "last_tick_commands": [],
       "commands": [],
@@ -643,7 +957,7 @@
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "saiyan_loop"
+            "ability": "ki-blast-dummy"
           },
           {
             "type": "palladium:scoreboard_score_buyable",
@@ -660,7 +974,7 @@
       "hidden": false,
       "title": "Ki-Blast",
       "icon": "minecraft:snowball",
-      "gui_position": [-1, 1],
+      "gui_position": [0, -1],
       "first_tick_commands": ["tag @s add ki-blast"],
       "last_tick_commands": [],
       "commands": [],
@@ -669,7 +983,7 @@
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "flight-dummy"
+            "ability": "saiyan_loop"
           },
           {
             "type": "palladium:scoreboard_score_buyable",
@@ -686,7 +1000,7 @@
       "hidden": false,
       "title": "Kamehameha",
       "icon": "minecraft:end_rod",
-      "gui_position": [-1.5, 1.5],
+      "gui_position": [0.5, -1.5],
       "first_tick_commands": ["tag @s add kamehameha"],
       "last_tick_commands": [],
       "commands": [],
@@ -712,7 +1026,7 @@
       "hidden": false,
       "title": "Kaio-Ken",
       "icon": "minecraft:end_rod",
-      "gui_position": [-1.5, 2.5],
+      "gui_position": [-1, -2],
       "first_tick_commands": ["tag @s add kaioken"],
       "last_tick_commands": [],
       "commands": [],
@@ -721,7 +1035,7 @@
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "kamehameha-dummy"
+            "ability": "flight-dummy"
           },
           {
             "type": "palladium:scoreboard_score_buyable",
@@ -733,9 +1047,29 @@
         ]
       }
     },
+    "ape": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g1.png",
+      "title": "Super Saiyan",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["superpower replace saiyan:saiyan saiyan:ape"],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:night"
+          }
+        ]
+      }
+    },
     "ssj1-g1": {
       "type": "palladium:command",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g1.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": true,
@@ -791,7 +1125,7 @@
     },
     "ssj1-g4": {
       "type": "palladium:command",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_268.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g4.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": true,
@@ -841,6 +1175,48 @@
                 "tag": "ssj1-g1"
               }
             ]
+          }
+        ]
+      }
+    },
+    "ssj_god": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj_god.png",
+      "title": "Super Saiyan",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 1000
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["superpower replace saiyan:saiyan saiyan:ssj_god"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 1000
+          },
+          {
+            "type": "palladium:crouching"
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "ssj_god"
           }
         ]
       }
@@ -1195,6 +1571,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 2
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 0 true"
@@ -1214,7 +1594,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx3_button": {
@@ -1226,6 +1612,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 3
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 1 true"
@@ -1245,7 +1635,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx4_button": {
@@ -1257,6 +1653,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 4
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 2 true"
@@ -1276,7 +1676,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx10_button": {
@@ -1288,6 +1694,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 5
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 3 true"
@@ -1307,7 +1717,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx20_button": {
@@ -1319,6 +1735,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 6
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 4 true"
@@ -1338,7 +1758,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaioken_wheel": {
