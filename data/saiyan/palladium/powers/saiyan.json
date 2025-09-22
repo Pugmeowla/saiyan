@@ -1109,6 +1109,45 @@
         "unlocking": [
           {
             "type": "palladium:night"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "ape"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ape2": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ape.png",
+      "title": "Great Ape",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["superpower replace saiyan:saiyan saiyan:ape"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "ape"
           }
         ]
       }
@@ -1829,7 +1868,8 @@
         "kaiokenx3_button",
         "kaiokenx4_button",
         "kaiokenx10_button",
-        "kaiokenx20_button"
+        "kaiokenx20_button",
+        "ape2"
       ],
       "texture": "null",
       "disable_mouse_scrolling": false,
@@ -1886,6 +1926,83 @@
       ],
       "last_tick_commands": ["tag @s remove cooldown"],
       "commands": []
+    },
+    "disable": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g1",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g2",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g3",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g4",
+        "execute if entity @s[tag=ssj2_off] run tag @s remove ssj2",
+        "execute if entity @s[tag=ssj3_off] run tag @s remove ssj3",
+        "execute if entity @s[tag=ssj4_off] run tag @s remove ssj4",
+        "execute if entity @s[tag=ape_off] run tag @s remove ape",
+        "execute if entity @s[tag=golden_ape_off] run tag @s remove golden_ape",
+        "execute if entity @s[tag=ssj2-fp_off] run tag @s remove ssj2-fp",
+        "execute if entity @s[tag=ssj3-fp_off] run tag @s remove ssj3-fp",
+        "execute if entity @s[tag=ssj4-fp_off] run tag @s remove ssj4-fp",
+        "execute if entity @s[tag=ssj_blue_off] run tag @s remove ssj_blue",
+        "execute if entity @s[tag=ssj_blue-fp_off] run tag @s remove ssj_blue-fp",
+        "execute if entity @s[tag=ssj_blue_evo_off] run tag @s remove ssj_blue_evo",
+        "execute if entity @s[tag=ssj_god_off] run tag @s remove ssj_god",
+        "execute if entity @s[tag=ue_off] run tag @s remove ue",
+        "execute if entity @s[tag=ui_perfect_off] run tag @s remove ui_perfect",
+        "execute if entity @s[tag=ui_true_off] run tag @s remove ui_true",
+        "execute if entity @s[tag=ui_sign_off] run tag @s remove ui_sign"
+      ],
+      "last_tick_commands": [
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g1",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g2",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g3",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g4",
+        "execute if entity @s[tag=ssj2_off] run tag @s remove ssj2",
+        "execute if entity @s[tag=ssj3_off] run tag @s remove ssj3",
+        "execute if entity @s[tag=ssj4_off] run tag @s remove ssj4",
+        "execute if entity @s[tag=ape_off] run tag @s remove ape",
+        "execute if entity @s[tag=golden_ape_off] run tag @s remove golden_ape",
+        "execute if entity @s[tag=ssj2-fp_off] run tag @s remove ssj2-fp",
+        "execute if entity @s[tag=ssj3-fp_off] run tag @s remove ssj3-fp",
+        "execute if entity @s[tag=ssj4-fp_off] run tag @s remove ssj4-fp",
+        "execute if entity @s[tag=ssj_blue_off] run tag @s remove ssj_blue",
+        "execute if entity @s[tag=ssj_blue-fp_off] run tag @s remove ssj_blue-fp",
+        "execute if entity @s[tag=ssj_blue_evo_off] run tag @s remove ssj_blue_evo",
+        "execute if entity @s[tag=ssj_god_off] run tag @s remove ssj_god",
+        "execute if entity @s[tag=ue_off] run tag @s remove ue",
+        "execute if entity @s[tag=ui_perfect_off] run tag @s remove ui_perfect",
+        "execute if entity @s[tag=ui_true_off] run tag @s remove ui_true",
+        "execute if entity @s[tag=ui_sign_off] run tag @s remove ui_sign"
+      ],
+      "commands": [
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g1",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g2",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g3",
+        "execute if entity @s[tag=ssj1_off] run tag @s remove ssj1-g4",
+        "execute if entity @s[tag=ssj2_off] run tag @s remove ssj2",
+        "execute if entity @s[tag=ssj3_off] run tag @s remove ssj3",
+        "execute if entity @s[tag=ssj4_off] run tag @s remove ssj4",
+        "execute if entity @s[tag=ape_off] run tag @s remove ape",
+        "execute if entity @s[tag=golden_ape_off] run tag @s remove golden_ape",
+        "execute if entity @s[tag=ssj2-fp_off] run tag @s remove ssj2-fp",
+        "execute if entity @s[tag=ssj3-fp_off] run tag @s remove ssj3-fp",
+        "execute if entity @s[tag=ssj4-fp_off] run tag @s remove ssj4-fp",
+        "execute if entity @s[tag=ssj_blue_off] run tag @s remove ssj_blue",
+        "execute if entity @s[tag=ssj_blue-fp_off] run tag @s remove ssj_blue-fp",
+        "execute if entity @s[tag=ssj_blue_evo_off] run tag @s remove ssj_blue_evo",
+        "execute if entity @s[tag=ssj_god_off] run tag @s remove ssj_god",
+        "execute if entity @s[tag=ue_off] run tag @s remove ue",
+        "execute if entity @s[tag=ui_perfect_off] run tag @s remove ui_perfect",
+        "execute if entity @s[tag=ui_true_off] run tag @s remove ui_true",
+        "execute if entity @s[tag=ui_sign_off] run tag @s remove ui_sign"
+      ]
     }
   }
 }

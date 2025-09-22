@@ -2,10 +2,7 @@
   "name": {
     "text": "ssj1-g1"
   },
-  "icon": {
-    "type": "palladium:texture",
-    "texture": "#alienevo:alien_sel"
-  },
+  "icon": "saiyan:textures/gui/playlists/playlist_1/golden_ape.png",
   "persistent_data": true,
   "hidden": true,
   "background": "alienevo:textures/gui/power_screen/power_screen.png",
@@ -124,7 +121,7 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "name": {
-        "translate": "species.alienevo_aliens.265"
+        "translate": "species.alienevo_aliens.264"
       },
       "conditions": {
         "enabling": [],
@@ -134,7 +131,7 @@
             "conditions": [
               {
                 "type": "alienevo:current_alien_nickname",
-                "value": "species.alienevo_aliens.265"
+                "value": "species.alienevo_aliens.264"
               },
               {
                 "type": "palladium:not",
@@ -160,7 +157,7 @@
       "list_index": -1,
       "name": [
         {
-          "nbt": "KubeJSPersistentData.alienevo_265",
+          "nbt": "KubeJSPersistentData.alienevo_264",
           "entity": "@s"
         }
       ],
@@ -175,7 +172,7 @@
                 "conditions": [
                   {
                     "type": "alienevo:current_alien_nickname",
-                    "value": "species.alienevo_aliens.265"
+                    "value": "species.alienevo_aliens.264"
                   }
                 ]
               },
@@ -506,7 +503,7 @@
     "charge2": {
       "type": "palladium:render_layer",
       "hidden": true,
-      "render_layer": "saiyan:charge",
+      "render_layer": "saiyan:charge-yellow",
       "conditions": {
         "enabling": [
           {

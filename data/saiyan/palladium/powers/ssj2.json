@@ -2,10 +2,7 @@
   "name": {
     "text": "ssj2"
   },
-  "icon": {
-    "type": "palladium:texture",
-    "texture": "#alienevo:alien_sel"
-  },
+  "icon": "saiyan:textures/gui/playlists/playlist_1/ssj2.png",
   "persistent_data": true,
   "hidden": true,
   "background": "alienevo:textures/gui/power_screen/power_screen.png",
@@ -69,11 +66,20 @@
       "conditions": {
         "unlocking": [
           {
-            "type": "palladium:not",
+            "type": "palladium:or",
             "conditions": [
               {
-                "type": "palladium:has_tag",
-                "tag": "ssj2-fp"
+                "type": "palladium:not",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ssj2-fp"
+                  }
+                ]
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "charge"
               }
             ]
           }
@@ -89,6 +95,15 @@
           {
             "type": "palladium:has_tag",
             "tag": "ssj2-fp"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "charge"
+              }
+            ]
           }
         ]
       }
@@ -150,7 +165,7 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "name": {
-        "translate": "species.alienevo_aliens.265"
+        "translate": "species.alienevo_aliens.264"
       },
       "conditions": {
         "enabling": [],
@@ -160,7 +175,7 @@
             "conditions": [
               {
                 "type": "alienevo:current_alien_nickname",
-                "value": "species.alienevo_aliens.265"
+                "value": "species.alienevo_aliens.264"
               },
               {
                 "type": "palladium:not",
@@ -186,7 +201,7 @@
       "list_index": -1,
       "name": [
         {
-          "nbt": "KubeJSPersistentData.alienevo_265",
+          "nbt": "KubeJSPersistentData.alienevo_264",
           "entity": "@s"
         }
       ],
@@ -201,7 +216,7 @@
                 "conditions": [
                   {
                     "type": "alienevo:current_alien_nickname",
-                    "value": "species.alienevo_aliens.265"
+                    "value": "species.alienevo_aliens.264"
                   }
                 ]
               },
@@ -1345,6 +1360,20 @@
           }
         ]
       }
+    },
+    "remove_cooldown2": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": ["tag @s remove cooldown"],
+      "commands": []
     }
   }
 }
