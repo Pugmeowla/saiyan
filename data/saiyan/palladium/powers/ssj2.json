@@ -15,7 +15,7 @@
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type": "tree",
   "energy_bars": {
-    "ssj2": {
+    "base": {
       "max": 4000,
       "auto_increase_per_tick": 1,
       "auto_increase_interval": 1,
@@ -65,7 +65,33 @@
     "render_layer_base": {
       "type": "palladium:render_layer",
       "hidden": true,
-      "render_layer": "saiyan:aliens/alien_264/ssj2"
+      "render_layer": "saiyan:aliens/alien_264/ssj2",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "ssj2-fp"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_fp": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "render_layer": "saiyan:aliens/alien_264/ssj2-fp",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "ssj2-fp"
+          }
+        ]
+      }
     },
     "render_layer_kaioken": {
       "type": "palladium:render_layer",
@@ -515,7 +541,7 @@
         "unlocking": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj2",
+            "energy_bar": "base",
             "min": 3900
           },
           {
@@ -536,7 +562,7 @@
       "gui_position": [0, 1],
       "description": "null",
       "energy_bar_usage": {
-        "energy_bar": "ssj2",
+        "energy_bar": "base",
         "amount": -40
       },
       "first_tick_commands": [
@@ -561,7 +587,7 @@
             "conditions": [
               {
                 "type": "palladium:energy_bar",
-                "energy_bar": "ssj2",
+                "energy_bar": "base",
                 "min": 3990
               }
             ]
@@ -572,7 +598,29 @@
     "charge2": {
       "type": "palladium:render_layer",
       "hidden": true,
-      "render_layer": "saiyan:charge-yellow"
+      "render_layer": "saiyan:charge-yellow",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:not",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ssj2-fp"
+                  }
+                ]
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "charge"
+              }
+            ]
+          }
+        ]
+      }
     },
     "fall_damage": {
       "type": "palladium:damage_immunity",
@@ -690,8 +738,21 @@
       "gui_position": "null",
       "description": "null",
       "energy_bar_usage": {
-        "energy_bar": "ssj2",
+        "energy_bar": "base",
         "amount": 3
+      },
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "ssj2-fp"
+              }
+            ]
+          }
+        ]
       }
     },
     "force_base": {
@@ -711,7 +772,7 @@
         "enabling": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj2",
+            "energy_bar": "base",
             "min": 0,
             "max": 4
           },
@@ -754,7 +815,7 @@
         "enabling": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj2",
+            "energy_bar": "base",
             "min": 0,
             "max": 4
           },
@@ -803,7 +864,7 @@
       "hidden": true,
       "hidden_in_bar": false,
       "energy_bar_usage": {
-        "energy_bar": "ssj2",
+        "energy_bar": "base",
         "amount": 10
       },
       "time": 4,
@@ -934,8 +995,17 @@
         "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 1 force"
       ],
       "conditions": {
-        "enabling": [],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "ssj2-fp"
+              }
+            ]
+          }
+        ]
       }
     },
     "sound": {
@@ -1042,6 +1112,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 2
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 0 true"
@@ -1061,7 +1135,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx3_button": {
@@ -1073,6 +1153,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 3
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 1 true"
@@ -1092,7 +1176,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx4_button": {
@@ -1104,6 +1194,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 4
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 2 true"
@@ -1123,7 +1217,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx10_button": {
@@ -1135,6 +1235,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 5
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 3 true"
@@ -1154,7 +1258,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx20_button": {
@@ -1166,6 +1276,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 6
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 4 true"
@@ -1185,7 +1299,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaioken_wheel": {

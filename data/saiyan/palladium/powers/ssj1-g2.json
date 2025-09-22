@@ -15,7 +15,7 @@
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type": "tree",
   "energy_bars": {
-    "ssj1-g1": {
+    "base": {
       "max": 2000,
       "auto_increase_per_tick": 1,
       "auto_increase_interval": 1,
@@ -520,7 +520,7 @@
         "unlocking": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj1-g1",
+            "energy_bar": "base",
             "min": 2000
           },
           {
@@ -541,7 +541,7 @@
       "gui_position": [0, 1],
       "description": "null",
       "energy_bar_usage": {
-        "energy_bar": "ssj1-g1",
+        "energy_bar": "base",
         "amount": -20
       },
       "first_tick_commands": [
@@ -566,7 +566,7 @@
             "conditions": [
               {
                 "type": "palladium:energy_bar",
-                "energy_bar": "ssj1-g1",
+                "energy_bar": "base",
                 "min": 2000
               }
             ]
@@ -739,6 +739,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 2
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 0 true"
@@ -758,7 +762,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx3_button": {
@@ -770,6 +780,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 3
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 1 true"
@@ -789,7 +803,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx4_button": {
@@ -801,6 +821,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 4
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 2 true"
@@ -820,7 +844,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx10_button": {
@@ -832,6 +862,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 5
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 3 true"
@@ -851,7 +885,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaiokenx20_button": {
@@ -863,6 +903,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 6
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 4 true"
@@ -882,7 +926,13 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
+          }
+        ]
       }
     },
     "kaioken_wheel": {
@@ -1120,7 +1170,7 @@
         "unlocking": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj1-g1",
+            "energy_bar": "base",
             "min": 1000
           },
           {

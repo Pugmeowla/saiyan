@@ -15,7 +15,7 @@
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type": "tree",
   "energy_bars": {
-    "ssj_god": {
+    "base": {
       "max": 10000,
       "auto_increase_per_tick": 5,
       "auto_increase_interval": 1,
@@ -442,7 +442,7 @@
         "unlocking": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj_god",
+            "energy_bar": "base",
             "min": 9900
           },
           {
@@ -532,7 +532,7 @@
       "gui_position": [0, 1],
       "description": "null",
       "energy_bar_usage": {
-        "energy_bar": "ssj_god",
+        "energy_bar": "base",
         "amount": -60
       },
       "first_tick_commands": [
@@ -557,7 +557,7 @@
             "conditions": [
               {
                 "type": "palladium:energy_bar",
-                "energy_bar": "ssj_god",
+                "energy_bar": "base",
                 "min": 9900
               }
             ]
@@ -681,7 +681,7 @@
         "enabling": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj_god",
+            "energy_bar": "base",
             "min": 0,
             "max": 4
           },
@@ -715,7 +715,7 @@
       "hidden": true,
       "hidden_in_bar": false,
       "energy_bar_usage": {
-        "energy_bar": "ssj_god",
+        "energy_bar": "base",
         "amount": 10
       },
       "time": 4,
@@ -960,6 +960,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 2
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 0 true"
@@ -981,8 +985,9 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
           }
         ]
       }
@@ -996,6 +1001,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 3
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 1 true"
@@ -1017,8 +1026,9 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
           }
         ]
       }
@@ -1032,6 +1042,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 4
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 2 true"
@@ -1053,8 +1067,9 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
           }
         ]
       }
@@ -1068,6 +1083,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 5
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 3 true"
@@ -1089,8 +1108,9 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
           }
         ]
       }
@@ -1104,6 +1124,10 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "description": "null",
+      "energy_bar_usage": {
+        "energy_bar": "base",
+        "amount": 6
+      },
       "first_tick_commands": [
         "tag @s add kaioken_on",
         "effect give @s minecraft:strength infinite 4 true"
@@ -1125,8 +1149,9 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 10
           }
         ]
       }

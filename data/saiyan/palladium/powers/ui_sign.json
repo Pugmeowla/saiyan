@@ -15,7 +15,7 @@
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "gui_display_type": "tree",
   "energy_bars": {
-    "ssj_god": {
+    "base": {
       "max": 10000,
       "auto_increase_per_tick": 1,
       "auto_increase_interval": 1,
@@ -429,7 +429,7 @@
         "unlocking": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj_god",
+            "energy_bar": "base",
             "min": 9000
           },
           {
@@ -485,7 +485,7 @@
       "gui_position": [0, 1],
       "description": "null",
       "energy_bar_usage": {
-        "energy_bar": "ssj_god",
+        "energy_bar": "base",
         "amount": -60
       },
       "first_tick_commands": [
@@ -510,7 +510,7 @@
             "conditions": [
               {
                 "type": "palladium:energy_bar",
-                "energy_bar": "ssj_god",
+                "energy_bar": "base",
                 "min": 9900
               }
             ]
@@ -634,7 +634,7 @@
         "enabling": [
           {
             "type": "palladium:energy_bar",
-            "energy_bar": "ssj_god",
+            "energy_bar": "base",
             "min": 0,
             "max": 4
           },
@@ -668,7 +668,7 @@
       "hidden": true,
       "hidden_in_bar": false,
       "energy_bar_usage": {
-        "energy_bar": "ssj_god",
+        "energy_bar": "base",
         "amount": 10
       },
       "time": 4,
@@ -951,7 +951,7 @@
       "gui_position": "null",
       "description": "null",
       "energy_bar_usage": {
-        "energy_bar": "ssj_god",
+        "energy_bar": "base",
         "amount": 10
       }
     }
