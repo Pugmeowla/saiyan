@@ -521,6 +521,19 @@
             "score": 5,
             "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
             "description": "test"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "wolf_alive"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "had_wolf"
           }
         ]
       }
@@ -778,7 +791,7 @@
       "hidden": false,
       "title": "Super Saiyan God",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj_god.png",
-      "description": "This transformation grants godly ki, increasing speed, power, and energy efficiency",
+      "description": "This transformation grants godly ki. It requires the use of Saiyan Ki dropped by Saiyan Warriors to be unlocked, which are found at Namekian Book Temples",
       "gui_position": [-1.5, 0.5],
       "first_tick_commands": ["tag @s add ssj_god"],
       "last_tick_commands": [],
@@ -791,11 +804,11 @@
             "ability": "saiyan_loop"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -2002,6 +2015,23 @@
         "execute if entity @s[tag=ui_perfect_off] run tag @s remove ui_perfect",
         "execute if entity @s[tag=ui_true_off] run tag @s remove ui_true",
         "execute if entity @s[tag=ui_sign_off] run tag @s remove ui_sign"
+      ]
+    },
+    "unlock_ssj1": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if entity @e[type=minecraft:wolf,tag=tagged_dog,limit=1,sort=nearest] run tag @s add wolf_alive",
+        "execute unless entity @e[type=minecraft:wolf,tag=tagged_dog,limit=1,sort=nearest] run tag @s remove wolf_alive"
       ]
     }
   }

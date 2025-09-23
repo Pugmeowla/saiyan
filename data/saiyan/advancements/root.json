@@ -1,0 +1,29 @@
+{
+  "display": {
+    "title": {
+      "text": "Saiyan Awakening",
+      "color": "yellow",
+      "bold": false,
+      "obfuscated": false,
+      "strikethrough": false,
+      "underlined": false
+    },
+    "description": {
+      "text": "by Pugmeowla"
+    },
+    "icon": {
+      "item": "minecraft:clock"
+    },
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": true,
+    "background": "minecraft:textures/block/deepslate_tiles.png"
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "requirements": [["tick"]]
+}

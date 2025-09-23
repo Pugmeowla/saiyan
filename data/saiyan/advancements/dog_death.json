@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "text": "A New Best Friend :)",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Tame a dog"
+    },
+    "icon": {
+      "item": "minecraft:clock"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:root",
+  "criteria": {
+    "tame": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wolf"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "saiyan:dog_tag"
+  }
+}

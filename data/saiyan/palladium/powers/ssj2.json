@@ -585,7 +585,8 @@
       ],
       "last_tick_commands": ["effect clear @s minecraft:slowness"],
       "commands": [
-        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
+        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force",
+        "particle dust 1 1 0 1 ~ ~1 ~ 0.5 1 0.5 0 10"
       ],
       "conditions": {
         "enabling": [
@@ -1007,7 +1008,8 @@
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
-        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 1 force"
+        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 1 force",
+        "particle dust 1 1 0 1 ~ ~1 ~ 0.5 1 0.5 0 10"
       ],
       "conditions": {
         "unlocking": [

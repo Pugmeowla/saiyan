@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "saiyan:book_temple",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 42067,
+    "frequency": 0.86,
+    "spacing": 86,
+    "separation": 68,
+    "type": "minecraft:random_spread"
+  }
+}
