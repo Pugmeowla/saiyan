@@ -5,7 +5,7 @@
       "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
       "texture": {
-        "base": "saiyan:textures/models/aliens/alien_264/saiyan.png",
+        "base": "saiyan:textures/models/aliens/alien_264/saiyan_mob.png",
         "transformers": [
           {
             "type": "palladium:color",
@@ -277,7 +277,7 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/base_hair.geo.json",
-      "texture": "saiyan:textures/models/aliens/alien_264/base_hair.png",
+      "texture": "saiyan:textures/models/aliens/alien_264/base_hair_mob.png",
       "bones": {
         "head": "Head"
       }
@@ -285,7 +285,7 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/tail.geo.json",
-      "texture": "saiyan:textures/models/aliens/alien_264/tail.png",
+      "texture": "saiyan:textures/models/aliens/alien_264/base_hair_mob.png",
       "bones": {
         "body": "body"
       }

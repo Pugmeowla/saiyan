@@ -502,7 +502,7 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Super Saiyan 1",
-      "description": "This transformation greatly boosts your power and speed",
+      "description": "To obtain Super Saiyan 1, it requires a strong emotional response to a tragedy, such as a pet wolf dying.",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g1.png",
       "gui_position": [2, 0.5],
       "first_tick_commands": ["tag @s add ssj1-g1"],
@@ -831,11 +831,11 @@
             "ability": "ssj_god-dummy"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -858,11 +858,11 @@
             "ability": "ssj_blue-dummy"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -885,11 +885,11 @@
             "ability": "ssj_blue-dummy"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -912,11 +912,11 @@
             "ability": "ssj_god-dummy"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -939,11 +939,11 @@
             "ability": "ui_sign-dummy"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -966,11 +966,11 @@
             "ability": "ui_sign-dummy"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -993,11 +993,11 @@
             "ability": "ssj_god-dummy"
           },
           {
-            "type": "palladium:scoreboard_score_buyable",
-            "objective": "Saiyan.SkillPoint",
-            "score": 5,
-            "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
-            "description": "test"
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "saiyan:saiyan_ki"
+            },
+            "amount": 5
           }
         ]
       }
@@ -1491,15 +1491,13 @@
             "type": "palladium:held",
             "cooldown": 0,
             "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "conditions": {
-              "unlocking": [
-                {
-                  "type": "palladium:has_tag",
-                  "tag": "ki-blast"
-                }
-              ]
-            }
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "ki-blast"
           }
         ]
       }

@@ -714,7 +714,7 @@
       "hidden_in_bar": false,
       "energy_bar_usage": {
         "energy_bar": "base",
-        "amount": 10
+        "amount": 1
       },
       "time": 4,
       "arm": "both",
@@ -724,15 +724,13 @@
             "type": "palladium:held",
             "cooldown": 0,
             "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "conditions": {
-              "unlocking": [
-                {
-                  "type": "palladium:has_tag",
-                  "tag": "ki-blast"
-                }
-              ]
-            }
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "ki-blast"
           }
         ]
       }

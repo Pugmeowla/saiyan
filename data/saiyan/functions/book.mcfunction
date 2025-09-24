@@ -1,1 +1,7 @@
 give @p written_book{title:"Namekian Book of Legends",author:"Elder Namek",pages:['{"text":"This book will tell you how to get God Ki. You first have to kill 5 saiyans and collect their Ki (item). Then you use this books power to unlock it in the ability tree in base form, by unlocking with the Ki items, with this book in your mainhand, ","color":"gold","extra":[{"text":"click this text to summon the saiyans if you are ready.","color":"red","bold":true,"underlined":true,"clickEvent":{"action":"run_command","value":"/give @p diamond 1"}}]}']} 1
+
+give @p minecraft:written_book{title:"Summon Dummy",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to summon the dummy","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/function saiyan:summon_saiyan"}}]']} 1
+
+give @p minecraft:written_book{title:"Return to Overworld",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to retrun","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/tp @s @e[tag=chamber_entrance,limit=1]"}}]']} 1
+
+give @p minecraft:written_book{title:"Hyperbolic Time Chamber",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to enter","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/tp @s @e[tag=chamber_middle,limit=1]"}}]']} 1

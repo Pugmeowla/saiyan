@@ -1,0 +1,1 @@
+execute as @a at @s if entity @e[type=armor_stand,tag=chamber_exit,distance=..0.5] run tp @s @e[tag=chamber_entrance,limit=1]

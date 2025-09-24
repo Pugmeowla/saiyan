@@ -1,10 +1,11 @@
-  {
+{
   "species.alienevo_aliens.264": "Saiyan",
   "alienevo.alien_desc.264": "<Saiyans> are a warrior race from Planet Vegeta, known for their fighting spirit, black spiky hair, and ability to transform into powerful forms.",
-  "item.saiyan.music_disc_cha_la_head_cha_la.desc":"Hironobu Kageyama - Cha-La Head-Cha-La",
-  "item.saiyan.music_disc_dan_dan_kokoro_hikareteku.desc":"Izumi Sakai and Tetsurō Oda - Dan Dan Kokoro Hikareteku",
-  "item.saiyan.music_disc_makafushigi_adventure.desc":"Hiroki Takahashi - Makafushigi Adventure!",
-  "item.saiyan.music_disc_ultimate_battle.desc":"ZENTA and Akira Kushida - Kyuukyoku no Battle / The Ultimate Battle",
-  "item.saiyan.music_disc_chouzetsu_dynamic.desc":"Kazuya Yoshii - Chōzetsu Dynamic!",
-  "item.saiyan.music_disc_dragon_soul.desc":"Yumi Yoshimoto and Takayoshi Tanimoto - Dragon Soul"
-  }
+  "item.saiyan.music_disc_cha_la_head_cha_la.desc": "Hironobu Kageyama - Cha-La Head-Cha-La",
+  "item.saiyan.music_disc_dan_dan_kokoro_hikareteku.desc": "Izumi Sakai and Tetsurō Oda - Dan Dan Kokoro Hikareteku",
+  "item.saiyan.music_disc_makafushigi_adventure.desc": "Hiroki Takahashi - Makafushigi Adventure!",
+  "item.saiyan.music_disc_ultimate_battle.desc": "ZENTA and Akira Kushida - Kyuukyoku no Battle / The Ultimate Battle",
+  "item.saiyan.music_disc_chouzetsu_dynamic.desc": "Kazuya Yoshii - Chōzetsu Dynamic!",
+  "item.saiyan.music_disc_dragon_soul.desc": "Yumi Yoshimoto and Takayoshi Tanimoto - Dragon Soul",
+  "item.saiyan.saiyan_ki": "Saiyan Ki"
+}
