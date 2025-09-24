@@ -75,7 +75,7 @@
       "gui_position": "null",
       "description": "null",
       "attribute": "minecraft:generic.max_health",
-      "amount": 500
+      "amount": 250
     },
     "attack": {
       "type": "palladium:attribute_modifier",
@@ -88,7 +88,7 @@
       "gui_position": "null",
       "description": "null",
       "attribute": "minecraft:generic.attack_damage",
-      "amount": 150
+      "amount": 80
     },
     "defence": {
       "type": "palladium:attribute_modifier",
@@ -101,7 +101,7 @@
       "gui_position": "null",
       "description": "null",
       "attribute": "minecraft:generic.armor",
-      "amount": 200
+      "amount": 100
     },
     "toughness": {
       "type": "palladium:attribute_modifier",
@@ -114,7 +114,7 @@
       "gui_position": "null",
       "description": "null",
       "attribute": "minecraft:generic.armor_toughness",
-      "amount": 100
+      "amount": 50
     },
     "speed": {
       "type": "palladium:attribute_modifier",
@@ -127,7 +127,7 @@
       "gui_position": "null",
       "description": "null",
       "attribute": "minecraft:generic.movement_speed",
-      "amount": 0.5
+      "amount": 0.036
     },
     "attack_speed": {
       "type": "palladium:attribute_modifier",
@@ -140,7 +140,7 @@
       "gui_position": "null",
       "description": "null",
       "attribute": "minecraft:generic.attack_speed",
-      "amount": 2
+      "amount": 5
     },
     "name_change": {
       "type": "palladium:name_change",
