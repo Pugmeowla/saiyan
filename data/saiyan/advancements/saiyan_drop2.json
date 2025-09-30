@@ -15,7 +15,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "saiyan:root",
+  "parent": "saiyan:saiyan_drop",
   "criteria": {
     "kill": {
       "trigger": "minecraft:player_killed_entity",

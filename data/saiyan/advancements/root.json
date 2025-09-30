@@ -12,13 +12,13 @@
       "text": "by Pugmeowla"
     },
     "icon": {
-      "item": "minecraft:clock"
+      "item": "saiyan:icon"
     },
     "frame": "challenge",
     "show_toast": false,
     "announce_to_chat": true,
     "hidden": true,
-    "background": "minecraft:textures/block/deepslate_tiles.png"
+    "background": "minecraft:textures/block/orange_concrete.png"
   },
   "criteria": {
     "tick": {
