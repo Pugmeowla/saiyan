@@ -1,5 +1,5 @@
 PalladiumEvents.registerAnimations((event) => {
-    event.register('alienevo/block', 15, (builder) => {
+    event.register('saiyan/block', 15, (builder) => {
         // Check all Saiyan powers
         let powers = ['saiyan:saiyan', 'saiyan:ssj1-g1', 'saiyan:ssj2', 'saiyan:ssj3','saiyan:ssj1-g4','saiyan:ssj_god','saiyan:ui_sign','saiyan:ui_perfect','saiyan:ssj_blue','saiyan:ssj_blue_evo','saiyan:ssj4','saiyan:ue','saiyan:ssj1-g3','saiyan:ssj1-g2'];
         let block_anim = 0;

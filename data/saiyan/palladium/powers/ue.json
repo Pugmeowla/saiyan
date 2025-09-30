@@ -437,7 +437,7 @@
     },
     "charge": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/ki.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": false,
@@ -640,6 +640,7 @@
       "commands": []
     },
     "ki-blast-aim": {
+      "icon": "saiyan:textures/models/ki-blast.png",
       "type": "palladium:aim",
       "list_index": 0,
       "hidden": true,

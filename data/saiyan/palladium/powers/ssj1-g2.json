@@ -529,7 +529,7 @@
     },
     "charge": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/ki.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": false,
@@ -784,17 +784,13 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
-          },
-          {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
           }
         ]
       }
     },
     "kaiokenx3_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/3.png",
       "title": "Kaioken ×3",
       "bar_color": "light_gray",
       "hidden": true,
@@ -829,17 +825,13 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
-          },
-          {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
           }
         ]
       }
     },
     "kaiokenx4_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/4.png",
       "title": "Kaioken ×4",
       "bar_color": "light_gray",
       "hidden": true,
@@ -874,17 +866,13 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
-          },
-          {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
           }
         ]
       }
     },
     "kaiokenx10_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/10.png",
       "title": "Kaioken ×10",
       "bar_color": "light_gray",
       "hidden": true,
@@ -919,17 +907,13 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
-          },
-          {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
           }
         ]
       }
     },
     "kaiokenx20_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/20.png",
       "title": "Kaioken ×20",
       "bar_color": "light_gray",
       "hidden": true,
@@ -964,17 +948,13 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
-          },
-          {
-            "type": "palladium:has_tag",
-            "tag": "kaioken"
           }
         ]
       }
     },
     "change_wheel": {
       "type": "palladium:ability_wheel",
-      "icon": "minecraft:blaze_rod",
+      "icon": "saiyan:textures/models/wheel.png",
       "title": "null",
       "bar_color": "light_gray",
       "hidden": true,
@@ -1007,6 +987,7 @@
     },
     "ki-blast-aim": {
       "type": "palladium:aim",
+      "icon": "saiyan:textures/models/ki-blast.png",
       "list_index": 0,
       "hidden": true,
       "hidden_in_bar": false,
@@ -1135,10 +1116,7 @@
       "gui_position": "null",
       "description": "null",
       "first_tick_commands": ["playsound saiyan:ssj player @s"],
-      "last_tick_commands": [
-        "stopsound @s",
-        "playsound saiyan:powerdown player @s"
-      ],
+      "last_tick_commands": ["stopsound @s", "playsound saiyan:ssj player @s"],
       "commands": []
     },
     "size": {

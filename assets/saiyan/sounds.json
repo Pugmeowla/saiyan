@@ -70,5 +70,13 @@
         "stream": true
       }
     ]
+  },
+  "ui_sign": {
+    "sounds": [
+      {
+        "name": "saiyan:ui_sign",
+        "stream": true
+      }
+    ]
   }
 }

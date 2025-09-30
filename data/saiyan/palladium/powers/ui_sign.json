@@ -513,7 +513,7 @@
     },
     "charge": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/ki.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": false,
@@ -720,6 +720,7 @@
       "commands": []
     },
     "ki-blast-aim": {
+      "icon": "saiyan:textures/models/ki-blast.png",
       "type": "palladium:aim",
       "list_index": 0,
       "hidden": true,
@@ -848,7 +849,7 @@
       "list_index": 4,
       "gui_position": "null",
       "description": "null",
-      "first_tick_commands": ["playsound saiyan:ssj player @s"],
+      "first_tick_commands": ["playsound saiyan:ui_sign player @s"],
       "last_tick_commands": ["stopsound @s"],
       "commands": []
     },
@@ -1008,6 +1009,19 @@
       "energy_bar_usage": {
         "energy_bar": "base",
         "amount": 25
+      },
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "ui_true"
+              }
+            ]
+          }
+        ]
       }
     },
     "charge_abil": {

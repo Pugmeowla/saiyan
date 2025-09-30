@@ -397,7 +397,7 @@
     },
     "ssj4": {
       "type": "palladium:command",
-      "icon": "saiyan:textures/gui/playlists/playlist_1/golden_ape.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj4.png",
       "title": "Super Saiyan 4",
       "bar_color": "light_gray",
       "hidden": false,
@@ -433,7 +433,7 @@
     },
     "ape": {
       "type": "palladium:command",
-      "icon": "saiyan:textures/gui/playlists/playlist_1/golden_ape.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ape.png",
       "title": "Great Ape",
       "bar_color": "light_gray",
       "hidden": false,
@@ -458,7 +458,7 @@
     },
     "charge": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/ki.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": false,

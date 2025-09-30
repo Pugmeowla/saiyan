@@ -547,7 +547,7 @@
     },
     "charge": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/ki.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": false,
@@ -783,6 +783,7 @@
       "commands": []
     },
     "ki-blast-aim": {
+      "icon": "saiyan:textures/models/ki-blast.png",
       "type": "palladium:aim",
       "list_index": 0,
       "hidden": true,
@@ -1072,7 +1073,7 @@
     },
     "kaiokenx3_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/3.png",
       "title": "Kaioken ×3",
       "bar_color": "light_gray",
       "hidden": true,
@@ -1113,7 +1114,7 @@
     },
     "kaiokenx4_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/4.png",
       "title": "Kaioken ×4",
       "bar_color": "light_gray",
       "hidden": true,
@@ -1154,7 +1155,7 @@
     },
     "kaiokenx10_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/10.png",
       "title": "Kaioken ×10",
       "bar_color": "light_gray",
       "hidden": true,
@@ -1195,7 +1196,7 @@
     },
     "kaiokenx20_button": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/20.png",
       "title": "Kaioken ×20",
       "bar_color": "light_gray",
       "hidden": true,
@@ -1236,7 +1237,7 @@
     },
     "kaioken_wheel": {
       "type": "palladium:ability_wheel",
-      "icon": "minecraft:blaze_rod",
+      "icon": "saiyan:textures/models/wheel.png",
       "title": "null",
       "bar_color": "light_gray",
       "hidden": true,

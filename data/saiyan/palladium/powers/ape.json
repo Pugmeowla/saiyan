@@ -457,7 +457,7 @@
     },
     "charge": {
       "type": "palladium:command",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/ki.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": false,
@@ -562,7 +562,7 @@
     },
     "base": {
       "type": "palladium:command",
-      "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/alien_264.png",
       "title": "Base",
       "bar_color": "light_gray",
       "hidden": true,
