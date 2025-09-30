@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "The hotter my battle soul burns, the stronger I become!",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Ultra Ego for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ue"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:ssj_god",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

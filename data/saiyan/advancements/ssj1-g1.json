@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "I am the hope of the universe!",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Super Saiyan 1 for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ssj1-g1"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:dog_death",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

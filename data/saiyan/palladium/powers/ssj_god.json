@@ -911,7 +911,12 @@
       "list_index": -1,
       "gui_position": "null",
       "description": "null",
-      "first_tick_commands": [],
+      "first_tick_commands": [
+        "particle minecraft:dust 1.0 0.0 0.0 1 ~ ~1 ~ 0.6 1 0.6 0 70 force",
+        "particle minecraft:flame ~ ~1 ~ 0.4 0.8 0.4 0.01 30 force",
+        "particle minecraft:soul_fire_flame ~ ~1 ~ 0.4 0.8 0.4 0.01 20 force",
+        "playsound minecraft:block.beacon.ambient player @a ~ ~ ~ 1 1"
+      ],
       "last_tick_commands": [],
       "commands": [
         "execute if entity @s[palladium.power=alienevo:prototype_omnitrix] run superpower remove saiyan:ssj_god @s"
@@ -1359,6 +1364,20 @@
           }
         ]
       }
+    },
+    "advancement": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["advancement grant @s only saiyan:ssj_god"],
+      "last_tick_commands": [],
+      "commands": []
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "I’ll never give in! Not while I’m still standing",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Super Saiyan Blue Evolved for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ssj_blue_evo"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:ssj_blue",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "This is the Saiyan’s true form",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Super Saiyan 4 for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ssj4"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:golden_ape",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

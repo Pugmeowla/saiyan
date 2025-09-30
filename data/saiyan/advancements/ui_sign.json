@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "My body is moving on its own",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Ultra Instinct Sign for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ui_sign"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:ssj_god",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

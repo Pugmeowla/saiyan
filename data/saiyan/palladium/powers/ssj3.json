@@ -958,7 +958,15 @@
       "description": "null",
       "first_tick_commands": [
         "summon minecraft:lightning_bolt ~4 ~ ~2",
-        "summon minecraft:lightning_bolt ~3 ~ ~4"
+        "summon minecraft:lightning_bolt ~-3 ~ ~2",
+        "summon minecraft:lightning_bolt ~2 ~ ~-4",
+        "summon minecraft:lightning_bolt ~-4 ~ ~-1",
+        "summon minecraft:lightning_bolt ~1 ~ ~5",
+        "summon minecraft:lightning_bolt ~-2 ~ ~-5",
+        "summon minecraft:lightning_bolt ~5 ~ ~-3",
+        "summon minecraft:lightning_bolt ~-5 ~ ~4",
+        "particle minecraft:dust 1.0 1.0 0.0 1 ~ ~1 ~ 1 1.2 1 0 100 force",
+        "playsound minecraft:entity.lightning_bolt.thunder player @a ~ ~ ~ 1 1"
       ],
       "last_tick_commands": [],
       "commands": [
@@ -1290,6 +1298,20 @@
           }
         ]
       }
+    },
+    "advancement": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["advancement grant @s only saiyan:ssj3"],
+      "last_tick_commands": [],
+      "commands": []
     }
   }
 }

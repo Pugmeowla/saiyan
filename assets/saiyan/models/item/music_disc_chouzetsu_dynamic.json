@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "saiyan:item/music_disc_chouzetsu_dynamic"
+  }
+}

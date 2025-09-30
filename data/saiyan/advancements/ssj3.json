@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "This is to go even further beyond!",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Super Saiyan 3 for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ssj3"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:ssj2",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

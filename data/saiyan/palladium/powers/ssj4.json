@@ -435,6 +435,46 @@
             "needs_empty_hand": false,
             "allow_scrolling_when_crouching": true
           }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:crouching"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "golden_ape": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/golden_ape.png",
+      "title": "Golden Great Ape",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["superpower replace saiyan:ssj4 saiyan:golden_ape"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:crouching"
+          }
         ]
       }
     },
@@ -871,7 +911,13 @@
       "list_index": -1,
       "gui_position": "null",
       "description": "null",
-      "first_tick_commands": [],
+      "first_tick_commands": [
+        "particle minecraft:dust 0.9 0.0 0.0 1 ~ ~1 ~ 0.9 1.2 0.9 0 120 force",
+        "particle minecraft:flame ~ ~1 ~ 0.6 1 0.6 0.02 40 force",
+        "particle minecraft:smoke ~ ~1 ~ 0.7 1 0.7 0.01 30 force",
+        "playsound minecraft:entity.wolf.howl player @a ~ ~ ~ 1 0.7",
+        "playsound minecraft:entity.blaze.ambient player @a ~ ~ ~ 1 1"
+      ],
       "last_tick_commands": [],
       "commands": [
         "execute if entity @s[palladium.power=alienevo:prototype_omnitrix] run superpower remove saiyan:ssj4 @s"
@@ -1278,6 +1324,20 @@
           }
         ]
       }
+    },
+    "advancement": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["advancement grant @s only saiyan:ssj4"],
+      "last_tick_commands": [],
+      "commands": []
     }
   }
 }

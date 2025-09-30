@@ -615,6 +615,20 @@
       "first_tick_commands": ["tag @s remove cooldown"],
       "last_tick_commands": ["tag @s remove cooldown"],
       "commands": [""]
+    },
+    "advancement": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["advancement grant @s only saiyan:ape"],
+      "last_tick_commands": [],
+      "commands": []
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "What’s happening to me? I can’t… control it!",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into a Great Ape for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ape"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

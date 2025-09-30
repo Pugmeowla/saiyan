@@ -787,7 +787,11 @@
       "list_index": -1,
       "gui_position": "null",
       "description": "null",
-      "first_tick_commands": [],
+      "first_tick_commands": [
+        "particle minecraft:dust 1.0 1.0 1.0 1 ~ ~1 ~ 0.9 1.2 0.9 0 100 force",
+        "particle minecraft:electric_spark ~ ~1 ~ 0.6 1 0.6 0.05 25 force",
+        "playsound minecraft:entity.ender_dragon.growl player @a ~ ~ ~ 1 1"
+      ],
       "last_tick_commands": [],
       "commands": [
         "execute if entity @s[palladium.power=alienevo:prototype_omnitrix] run superpower remove saiyan:ui_perfect @s"
@@ -952,6 +956,20 @@
           }
         ]
       }
+    },
+    "advancement": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["advancement grant @s only saiyan:ui_perfect"],
+      "last_tick_commands": [],
+      "commands": []
     }
   }
 }

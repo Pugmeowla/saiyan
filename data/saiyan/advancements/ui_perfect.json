@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "Your power is astonishing… but it’s nothing compared to what I’m capable of now",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Perfected Ultra Instinct for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ui_perfect"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:ui_sign",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

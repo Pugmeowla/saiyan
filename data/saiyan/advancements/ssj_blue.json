@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "This is the power that’s beyond Super Saiyan God",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Super Saiyan Blue for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ssj_blue"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:ssj_god",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

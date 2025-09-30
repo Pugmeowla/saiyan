@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "This… this is the power of a god",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Super Saiyan God for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ssj_god"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:saiyan_drop",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "It’s not a miracle. It’s what happens when you push a Saiyan beyond his limits.",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Transform into Super Saiyan 2 for the first time"
+    },
+    "icon": {
+      "item": "saiyan:ssj2"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "saiyan:ssj1-g1",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
