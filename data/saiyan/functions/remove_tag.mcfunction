@@ -1,0 +1,1 @@
+execute as @p[tag=transforming] run tag @s remove transforming2

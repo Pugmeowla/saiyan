@@ -1,0 +1,1 @@
+execute as @p[tag=transforming] run superpower replace saiyan:ui_sign saiyan:ui_perfect

@@ -527,6 +527,26 @@
             "cooldown": 250,
             "needs_empty_hand": false,
             "key_type": "right_click"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "ki-blast-aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "charge"
+              }
+            ]
           }
         ]
       }
@@ -912,6 +932,24 @@
       "energy_bar_usage": {
         "energy_bar": "base",
         "amount": 3
+      }
+    },
+    "charge_abil": {
+      "type": "palladium:animation_timer",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "charge"
+          }
+        ]
       }
     }
   }

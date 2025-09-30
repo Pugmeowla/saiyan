@@ -4,7 +4,7 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
-      "texture": "saiyan:textures/models/aliens/alien_264/ssj1-g4.png",
+      "texture": "saiyan:textures/models/aliens/alien_264/ssj3-fp.png",
       "bones": {
         "head": "head",
         "body": "body",

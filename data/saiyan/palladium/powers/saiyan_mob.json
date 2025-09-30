@@ -151,6 +151,18 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "name": "test"
+    },
+    "test": {
+      "type": "palladium:damage_immunity",
+      "icon": "minecraft:potion",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "damage_sources": ["minecraft:is_projectile"]
     }
   }
 }

@@ -12,3 +12,5 @@ execute in saiyan:chamber run setblock 0 73 0 redstone_block
 execute in minecraft:overworld run forceload add 78 1992
 execute in minecraft:overworld run setblock 78 150 1992 minecraft:structure_block{mode:"LOAD",name:"saiyan:book_temple/book_temple",posX:0,posY:0,posZ:0,rotation:"NONE",mirror:"NONE",ignoreEntities:0b,integrity:1.0f,seed:0L,auto:0b} replace
 execute in minecraft:overworld run setblock 78 151 1992 redstone_block
+
+schedule function saiyan:temple_repair2 6000t

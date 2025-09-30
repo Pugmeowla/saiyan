@@ -425,7 +425,12 @@
       "description": "null",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:ssj_god saiyan:ssj_blue"],
+      "commands": [
+        "schedule function saiyan:ssj_blue 24t",
+        "schedule function saiyan:remove_tag 20t",
+        "tag @s add transforming",
+        "tag @s add transforming2"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -448,6 +453,41 @@
           }
         ]
       }
+    },
+    "transform_abil": {
+      "type": "palladium:animation_timer",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": { "translate": "ability.alienevo_aliens.6.block" },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "transforming2"
+          }
+        ]
+      }
+    },
+    "remove_tag": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [
+        "particle alienevo:sonic_boom ~ ~1 ~ 0 0 0 0 1 force",
+        "superpower add saiyan:transform_flash",
+        "tag @s remove transforming"
+      ],
+      "commands": []
     },
     "ssj4": {
       "type": "palladium:command",
@@ -485,7 +525,7 @@
     },
     "base": {
       "type": "palladium:command",
-      "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/alien_264.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": false,
@@ -611,6 +651,26 @@
             "cooldown": 250,
             "needs_empty_hand": false,
             "key_type": "right_click"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "ki-blast-aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "charge"
+              }
+            ]
           }
         ]
       }
@@ -984,6 +1044,10 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken"
           }
         ]
       }
@@ -1025,6 +1089,10 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken"
           }
         ]
       }
@@ -1066,6 +1134,10 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken"
           }
         ]
       }
@@ -1107,6 +1179,10 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken"
           }
         ]
       }
@@ -1148,6 +1224,10 @@
             "type": "palladium:energy_bar",
             "energy_bar": "base",
             "min": 10
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken"
           }
         ]
       }
@@ -1169,7 +1249,8 @@
         "kaiokenx4_button",
         "kaiokenx10_button",
         "kaiokenx20_button",
-        "ui_sign"
+        "ui_sign",
+        "ue"
       ],
       "texture": "null",
       "disable_mouse_scrolling": false,
@@ -1183,12 +1264,67 @@
             "needs_empty_hand": false
           }
         ],
-        "unlocking": []
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "kaioken"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "ui_sign"
+              }
+            ]
+          }
+        ]
       }
     },
     "ui_sign": {
       "type": "palladium:command",
-      "icon": "saiyan:textures/gui/playlists/playlist_1/base.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ui_sign.png",
+      "title": "Ultra Instinct -Sign-",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "schedule function saiyan:ui_sign 24t",
+        "schedule function saiyan:remove_tag 20t",
+        "tag @s add transforming",
+        "tag @s add transforming2"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "base",
+            "min": 9900
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "ui_sign"
+          }
+        ]
+      }
+    },
+    "ue": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ue.png",
       "title": "Super Saiyan",
       "bar_color": "light_gray",
       "hidden": true,
@@ -1198,7 +1334,7 @@
       "description": "null",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:ssj_god saiyan:ui_sign"],
+      "commands": ["superpower replace saiyan:ssj_god saiyan:ue"],
       "conditions": {
         "enabling": [
           {
@@ -1220,7 +1356,25 @@
           },
           {
             "type": "palladium:has_tag",
-            "tag": "ui_sign"
+            "tag": "ue"
+          }
+        ]
+      }
+    },
+    "charge_abil": {
+      "type": "palladium:animation_timer",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "charge"
           }
         ]
       }

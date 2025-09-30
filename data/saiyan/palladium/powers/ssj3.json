@@ -447,7 +447,7 @@
     "ssj4": {
       "type": "palladium:command",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj4.png",
-      "title": "Super Saiyan 4",
+      "title": "Super Saiyan 2",
       "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": false,
@@ -456,7 +456,12 @@
       "description": "null",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:ssj3 saiyan:ssj4"],
+      "commands": [
+        "schedule function saiyan:ssj4 24t",
+        "schedule function saiyan:remove_tag 20t",
+        "tag @s add transforming",
+        "tag @s add transforming2"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -471,7 +476,7 @@
           {
             "type": "palladium:energy_bar",
             "energy_bar": "base",
-            "min": 5700
+            "min": 1900
           },
           {
             "type": "palladium:has_tag",
@@ -479,6 +484,41 @@
           }
         ]
       }
+    },
+    "transform_abil": {
+      "type": "palladium:animation_timer",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": { "translate": "ability.alienevo_aliens.6.block" },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "transforming2"
+          }
+        ]
+      }
+    },
+    "remove_tag": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [
+        "particle alienevo:sonic_boom ~ ~1 ~ 0 0 0 0 1 force",
+        "superpower add saiyan:transform_flash",
+        "tag @s remove transforming"
+      ],
+      "commands": []
     },
     "ssj2": {
       "type": "palladium:command",
@@ -563,7 +603,6 @@
         ]
       }
     },
-
     "fall_damage": {
       "type": "palladium:damage_immunity",
       "icon": "minecraft:potion",
@@ -599,6 +638,26 @@
             "cooldown": 250,
             "needs_empty_hand": false,
             "key_type": "right_click"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "ki-blast-aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "charge"
+              }
+            ]
           }
         ]
       }
@@ -896,7 +955,10 @@
       "list_index": -1,
       "gui_position": "null",
       "description": "null",
-      "first_tick_commands": [],
+      "first_tick_commands": [
+        "summon minecraft:lightning_bolt ~4 ~ ~2",
+        "summon minecraft:lightning_bolt ~3 ~ ~4"
+      ],
       "last_tick_commands": [],
       "commands": [
         "execute if entity @s[palladium.power=alienevo:prototype_omnitrix] run superpower remove saiyan:ssj3 @s"
@@ -1206,6 +1268,24 @@
           {
             "type": "palladium:has_tag",
             "tag": "kaioken"
+          }
+        ]
+      }
+    },
+    "charge_abil": {
+      "type": "palladium:animation_timer",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "charge"
           }
         ]
       }

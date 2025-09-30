@@ -1,0 +1,1 @@
+execute as @p[tag=transforming] run superpower replace saiyan:saiyan saiyan:ssj1-g1

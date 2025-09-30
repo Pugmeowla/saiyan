@@ -5,6 +5,7 @@
       "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
       "enchantment_glint": true,
+      "render_type": "glow",
       "texture": "saiyan:textures/models/aliens/alien_264/ui_perfect.png",
       "bones": {
         "head": "head",
@@ -19,6 +20,7 @@
       "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/base_hair.geo.json",
       "texture": "saiyan:textures/models/aliens/alien_264/ui_perfect_hair.png",
+      "render_type": "glow",
       "enchantment_glint": true,
       "bones": {
         "head": "Head"
@@ -27,6 +29,7 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/tail.geo.json",
+      "render_type": "glow",
       "texture": "saiyan:textures/models/aliens/alien_264/ui_perfect_hair.png",
       "enchantment_glint": true,
       "bones": {

@@ -4,7 +4,7 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
-      "texture": "saiyan:textures/models/aliens/alien_264/kaioken.png",
+      "texture": "saiyan:textures/models/aliens/alien_264/kaioken_ssj4.png",
       "bones": {
         "head": "head",
         "body": "body",
@@ -17,7 +17,7 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/ssj4_hair.geo.json",
-      "texture": "saiyan:textures/models/aliens/alien_264/ssj4_hair.png",
+      "texture": "saiyan:textures/models/aliens/alien_264/kaioken_ssj4_hair.png",
       "bones": {
         "head": "head"
       }
@@ -25,26 +25,15 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/tail.geo.json",
-      "texture": "saiyan:textures/models/aliens/alien_264/ssj_hair.png",
+      "texture": "saiyan:textures/models/aliens/alien_264/ssj4_tail_hair.png",
       "bones": {
         "body": "body"
       }
     },
     {
-      "type": "palladium:lightning_sparks",
-      "frequency": 0.2,
-      "amount": 12,
-      "core_color": "#b0e0ff",
-      "glow_color": "#87cefa",
-      "core_opacity": 1.0,
-      "glow_opacity": 1.0,
-      "thickness": 0.025,
-      "normal_transparency": false
-    },
-    {
       "type": "geckolib:default",
       "model": {
-        "base": "saiyan:geo/aliens/alien_264/badge.geo.json",
+        "base": "saiyan:geo/aliens/alien_264/ssj4_badge.geo.json",
         "variables": {
           "BADGE": {
             "type": "palladium:string_property",
@@ -60,7 +49,7 @@
       "type": "geckolib:default",
       "render_type": "glow",
       "model": {
-        "base": "saiyan:geo/aliens/alien_264/badge.geo.json",
+        "base": "saiyan:geo/aliens/alien_264/ssj4_badge.geo.json",
         "variables": {
           "BADGE": {
             "type": "palladium:string_property",
@@ -86,7 +75,7 @@
       "type": "geckolib:default",
       "render_type": "glow",
       "model": {
-        "base": "saiyan:geo/aliens/alien_264/badge.geo.json",
+        "base": "saiyan:geo/aliens/alien_264/ssj4_badge.geo.json",
         "variables": {
           "BADGE": {
             "type": "palladium:string_property",

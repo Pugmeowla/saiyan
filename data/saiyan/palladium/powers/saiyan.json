@@ -664,6 +664,11 @@
             "ability": "ssj2-dummy"
           },
           {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj1-fp-dummy"
+          },
+          {
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
@@ -718,6 +723,11 @@
             "ability": "ssj3-dummy"
           },
           {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj2-fp-dummy"
+          },
+          {
             "type": "palladium:scoreboard_score_buyable",
             "objective": "Saiyan.SkillPoint",
             "score": 5,
@@ -765,7 +775,7 @@
       "title": "Super Saiyan 4 Full Power",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj4.png",
       "description": "This transformation stabilises Super Saiyan 4, granting full power with no stamina drain",
-      "gui_position": [1, 5],
+      "gui_position": [3, 4.5],
       "first_tick_commands": ["tag @s add ssj4-fp"],
       "last_tick_commands": [],
       "commands": [],
@@ -775,6 +785,11 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "ssj4-dummy"
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "ssj3-fp-dummy"
           },
           {
             "type": "palladium:scoreboard_score_buyable",
@@ -791,7 +806,7 @@
       "hidden": false,
       "title": "Super Saiyan God",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj_god.png",
-      "description": "This transformation grants godly ki. It requires the use of Saiyan Ki dropped by Saiyan Warriors to be unlocked, which are found at Namekian Book Temples",
+      "description": "This transformation grants godly ki. It requires the use of Saiyan Ki, dropped by Dummies, to be unlocked, which are found in the Hyperbolic Time Chamber found at 72, 200 1992",
       "gui_position": [-1.5, 0.5],
       "first_tick_commands": ["tag @s add ssj_god"],
       "last_tick_commands": [],
@@ -952,7 +967,7 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "True Ultra Instinct",
-      "icon": "saiyan:textures/gui/playlists/playlist_1/ui_true.png",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ui_sign.png",
       "description": "This transformation represents complete harmony of body and mind, granting ultimate instinctual offense and defense",
       "gui_position": [-2.5, 2],
       "first_tick_commands": ["tag @s add ui_true"],
@@ -1167,20 +1182,22 @@
     },
     "ssj1-g1": {
       "type": "palladium:command",
-      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g1.png",
-      "title": "Super Saiyan",
+      "icon": "saiyan:textures/gui/playlists/playlist_1/ssj.png",
+      "title": "Super Saiyan 2",
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
+      "gui_position": "null",
       "description": "null",
-      "energy_bar_usage": {
-        "energy_bar": "base",
-        "amount": 1000
-      },
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:saiyan saiyan:ssj1-g1"],
+      "commands": [
+        "schedule function saiyan:ssj1-g1 24t",
+        "schedule function saiyan:remove_tag 20t",
+        "tag @s add transforming",
+        "tag @s add transforming2"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -1221,22 +1238,59 @@
         ]
       }
     },
+    "transform_abil": {
+      "type": "palladium:animation_timer",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": { "translate": "ability.alienevo_aliens.6.block" },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "transforming2"
+          }
+        ]
+      }
+    },
+    "remove_tag": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [
+        "particle alienevo:sonic_boom ~ ~1 ~ 0 0 0 0 1 force",
+        "superpower add saiyan:transform_flash",
+        "tag @s remove transforming"
+      ],
+      "commands": []
+    },
     "ssj1-g4": {
       "type": "palladium:command",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj1-g4.png",
-      "title": "Super Saiyan",
+      "title": "Super Saiyan Full Power",
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
+      "gui_position": "null",
       "description": "null",
-      "energy_bar_usage": {
-        "energy_bar": "base",
-        "amount": 1000
-      },
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:saiyan saiyan:ssj1-g4"],
+      "commands": [
+        "schedule function saiyan:ssj1-g4 24t",
+        "schedule function saiyan:remove_tag 20t",
+        "tag @s add transforming",
+        "tag @s add transforming2"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -1280,19 +1334,21 @@
     "ssj_god": {
       "type": "palladium:command",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj_god.png",
-      "title": "Super Saiyan",
+      "title": "Super Saiyan God",
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
+      "gui_position": "null",
       "description": "null",
-      "energy_bar_usage": {
-        "energy_bar": "base",
-        "amount": 1000
-      },
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:saiyan saiyan:ssj_god"],
+      "commands": [
+        "schedule function saiyan:ssj_god 24t",
+        "schedule function saiyan:remove_tag 20t",
+        "tag @s add transforming",
+        "tag @s add transforming2"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -1322,7 +1378,7 @@
     "charge": {
       "type": "palladium:command",
       "icon": "minecraft:snowball",
-      "title": "Super Saiyan",
+      "title": "Charge",
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": false,
@@ -1410,6 +1466,26 @@
             "cooldown": 250,
             "needs_empty_hand": false,
             "key_type": "right_click"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "ki-blast-aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "null",
+                "ability": "charge"
+              }
+            ]
           }
         ]
       }
@@ -2031,6 +2107,24 @@
         "execute if entity @e[type=minecraft:wolf,tag=tagged_dog,limit=1,sort=nearest] run tag @s add wolf_alive",
         "execute unless entity @e[type=minecraft:wolf,tag=tagged_dog,limit=1,sort=nearest] run tag @s remove wolf_alive"
       ]
+    },
+    "charge_abil": {
+      "type": "palladium:animation_timer",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "charge"
+          }
+        ]
+      }
     }
   }
 }
