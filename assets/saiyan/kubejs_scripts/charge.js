@@ -20,30 +20,32 @@ PalladiumEvents.registerAnimations((event) => {
         if (charge_anim > 0 && !builder.isFirstPerson()) {
             // Body slightly tilted back
             builder.get('body')
-                .setXRotDegrees(0)
+                .setXRotDegrees(-5)
                 .animate('InOutCubic', charge_anim);
 
             // Head slightly tilted down
             builder.get('head')
-                .setXRotDegrees(0)
+                .setXRotDegrees(20)
                 .animate('InOutCubic', charge_anim);
 
             // Legs flared outward
             builder.get('right_leg')
-                .setXRotDegrees(0)
-                .setYRotDegrees(-15)
+                .setXRotDegrees(-10)
+                .setYRotDegrees(15)
+                .setZRotDegrees(15)
                 .animate('InOutCubic', charge_anim);
 
             builder.get('left_leg')
-                .setXRotDegrees(0)
-                .setYRotDegrees(15)
+                .setXRotDegrees(-10)
+                .setYRotDegrees(-15)
+                .setZRotDegrees(-15)
                 .animate('InOutCubic', charge_anim);
 
             // Right arm straight, slightly flared outward
             builder.get('right_arm')
                 .setXRotDegrees(-10)
-                .setYRotDegrees(-25)
-                .setZRotDegrees(10)
+                .setYRotDegrees(-40)
+                .setZRotDegrees(50)
                 .setX(builder.getModel().rightArm.x)
                 .setZ(builder.getModel().rightArm.z)
                 .animate('InOutCubic', charge_anim);
@@ -51,8 +53,8 @@ PalladiumEvents.registerAnimations((event) => {
             // Left arm straight, slightly flared outward
             builder.get('left_arm')
                 .setXRotDegrees(-10)
-                .setYRotDegrees(25)
-                .setZRotDegrees(-10)
+                .setYRotDegrees(40)
+                .setZRotDegrees(-50)
                 .setX(builder.getModel().leftArm.x)
                 .setZ(builder.getModel().leftArm.z)
                 .animate('InOutCubic', charge_anim);

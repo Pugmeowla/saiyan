@@ -78,5 +78,13 @@
         "stream": true
       }
     ]
+  },
+  "kamehameha": {
+    "sounds": [
+      {
+        "name": "saiyan:kamehameha",
+        "stream": true
+      }
+    ]
   }
 }

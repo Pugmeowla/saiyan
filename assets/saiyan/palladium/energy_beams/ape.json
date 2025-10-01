@@ -1,0 +1,10 @@
+[
+  {
+    "body_part": "head",
+    "glow_color": "#FFD700",
+    "core_color": "#FFFFAA",
+    "rotation_speed": 21,
+    "size": 4,
+    "offset": [0, 7, 0]
+  }
+]

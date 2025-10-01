@@ -914,7 +914,7 @@
       "first_tick_commands": [
         "particle minecraft:dust 1.0 0.0 0.0 1 ~ ~1 ~ 0.6 1 0.6 0 70 force",
         "particle minecraft:flame ~ ~1 ~ 0.4 0.8 0.4 0.01 30 force",
-        "particle minecraft:soul_fire_flame ~ ~1 ~ 0.4 0.8 0.4 0.01 20 force",
+        "particle minecraft:small_flame ~ ~1 ~ 0.3 0.3 0.3 0.05 30 force",
         "playsound minecraft:block.beacon.ambient player @a ~ ~ ~ 1 1"
       ],
       "last_tick_commands": [],
@@ -1378,6 +1378,216 @@
       "first_tick_commands": ["advancement grant @s only saiyan:ssj_god"],
       "last_tick_commands": [],
       "commands": []
+    },
+    "kamehameha": {
+      "type": "palladium:energy_beam",
+      "icon": "saiyan:textures/models/kamehameha.png",
+      "title": "Kamehameha",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "saiyan:kamehameha",
+      "damage_type": "null",
+      "damage": 5,
+      "max_distance": 30,
+      "speed": 0.5,
+      "set_on_fire_seconds": 0,
+      "cause_fire": false,
+      "smelt_blocks": false,
+      "commands_on_block_hit": ["summon tnt ~ ~ ~"],
+      "commands_on_entity_hit": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kame3"
+          }
+        ],
+
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kamehameha"
+          }
+        ]
+      }
+    },
+    "kame_abil": {
+      "type": "palladium:animation_timer",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kame1"
+          }
+        ]
+      }
+    },
+    "kame2_abil": {
+      "type": "palladium:animation_timer",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kame3"
+          }
+        ]
+      }
+    },
+    "kame_arms": {
+      "type": "palladium:show_both_arms",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "kamehameha"
+          }
+        ]
+      }
+    },
+    "kame_immune": {
+      "type": "palladium:damage_immunity",
+      "icon": "minecraft:potion",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "damage_sources": ["minecraft:is_explosion"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "kamehameha"
+          }
+        ]
+      }
+    },
+    "kame_command": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/models/kamehameha.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "tag @s add kame1",
+        "function saiyan:kame",
+        "playsound saiyan:kamehameha block @s ~ ~ ~"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "kame1"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "kame3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "kame_command2": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["effect give @s minecraft:slowness 18 255 true"],
+      "last_tick_commands": [],
+      "commands": [
+        "particle minecraft:end_rod ~ ~1 ~ 0.6 0.6 0.6 0.005 2 force",
+        "particle minecraft:large_smoke ~ ~1 ~ 0.5 0.5 0.5 0.01 1 force",
+        "particle minecraft:cloud ~ ~1 ~ 0.4 0.4 0.4 0.005 1 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kame1"
+          }
+        ]
+      }
+    },
+    "kame_command3": {
+      "type": "palladium:command",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "particle minecraft:explosion ~ ~1 ~ 0.5 0.5 0.5 0.05 10 force"
+      ],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kame3"
+          }
+        ]
+      }
     }
   }
 }
