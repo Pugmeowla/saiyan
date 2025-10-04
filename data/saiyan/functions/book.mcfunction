@@ -2,6 +2,8 @@ give @p written_book{title:"Namekian Book of Legends",author:"Elder Namek",pages
 
 give @p minecraft:written_book{title:"Summon Dummy",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to summon the dummy","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/function saiyan:summon_saiyan"}}]']} 1
 
+give @p minecraft:written_book{title:"Summon Weak Dummy",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to summon the weak dummy","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/function saiyan:summon_saiyan_weak1"}}]']} 1
+
 give @p minecraft:written_book{title:"Return to Overworld",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to retrun","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/tp @s @e[tag=chamber_entrance,limit=1]"}}]']} 1
 
 give @p minecraft:written_book{title:"Hyperbolic Time Chamber",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to enter","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/execute in saiyan:chamber run tp @s 20 73 18"}}]']} 1

@@ -454,7 +454,8 @@
         "schedule function saiyan:ssj2 24t",
         "schedule function saiyan:remove_tag 20t",
         "tag @s add transforming",
-        "tag @s add transforming2"
+        "tag @s add transforming2",
+        "playsound minecraft:block.end_portal_frame.fill master @p ~ ~ ~ 1 1"
       ],
       "conditions": {
         "enabling": [

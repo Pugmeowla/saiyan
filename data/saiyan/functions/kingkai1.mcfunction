@@ -1,0 +1,1 @@
+tellraw @a [{"text":"<","color":"white"},{"text":"King Kai","color":"gold"},{"text":"> Kami tap-dancing Kai, you brain-dead jackass! Mixing Kaio-ken with Super Saiyan Grade 3 isn't gonna work, it's strapping explosives to your nuts and calling it a power up!","color":"white"}]

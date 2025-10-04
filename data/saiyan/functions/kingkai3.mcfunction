@@ -1,0 +1,1 @@
+tellraw @a [{"text":"<","color":"white"},{"text":"King Kai","color":"gold"},{"text":"> Congratulations, genius. You just turned ‘going beyond’ into ‘going straight to the ER.’ Stacking Super Saiyan 3 and Kaio-ken is f*cking stupid you saiyan monkey!","color":"white"}]

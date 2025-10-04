@@ -1,0 +1,1 @@
+playsound saiyan:kamehameha2 block @a[tag=kame_sound] ~ ~ ~

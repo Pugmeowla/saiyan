@@ -706,14 +706,8 @@
         "energy_bar": "base",
         "amount": 2
       },
-      "first_tick_commands": [
-        "tag @s add kaioken_on",
-        "effect give @s minecraft:strength infinite 0 true"
-      ],
-      "last_tick_commands": [
-        "tag @s remove kaioken_on",
-        "effect clear @s minecraft:strength"
-      ],
+      "first_tick_commands": ["function saiyan:kingkai2"],
+      "last_tick_commands": [],
       "commands": [],
       "conditions": {
         "enabling": [
@@ -747,14 +741,8 @@
         "energy_bar": "base",
         "amount": 3
       },
-      "first_tick_commands": [
-        "tag @s add kaioken_on",
-        "effect give @s minecraft:strength infinite 1 true"
-      ],
-      "last_tick_commands": [
-        "tag @s remove kaioken_on",
-        "effect clear @s minecraft:strength"
-      ],
+      "first_tick_commands": ["function saiyan:kingkai1"],
+      "last_tick_commands": [],
       "commands": [],
       "conditions": {
         "enabling": [
@@ -788,14 +776,8 @@
         "energy_bar": "base",
         "amount": 4
       },
-      "first_tick_commands": [
-        "tag @s add kaioken_on",
-        "effect give @s minecraft:strength infinite 2 true"
-      ],
-      "last_tick_commands": [
-        "tag @s remove kaioken_on",
-        "effect clear @s minecraft:strength"
-      ],
+      "first_tick_commands": ["function saiyan:kingkai2"],
+      "last_tick_commands": [],
       "commands": [],
       "conditions": {
         "enabling": [
@@ -829,14 +811,8 @@
         "energy_bar": "base",
         "amount": 5
       },
-      "first_tick_commands": [
-        "tag @s add kaioken_on",
-        "effect give @s minecraft:strength infinite 3 true"
-      ],
-      "last_tick_commands": [
-        "tag @s remove kaioken_on",
-        "effect clear @s minecraft:strength"
-      ],
+      "first_tick_commands": ["function saiyan:kingkai2"],
+      "last_tick_commands": [],
       "commands": [],
       "conditions": {
         "enabling": [
@@ -870,14 +846,8 @@
         "energy_bar": "base",
         "amount": 6
       },
-      "first_tick_commands": [
-        "tag @s add kaioken_on",
-        "effect give @s minecraft:strength infinite 4 true"
-      ],
-      "last_tick_commands": [
-        "tag @s remove kaioken_on",
-        "effect clear @s minecraft:strength"
-      ],
+      "first_tick_commands": ["function saiyan:kingkai1"],
+      "last_tick_commands": [],
       "commands": [],
       "conditions": {
         "enabling": [

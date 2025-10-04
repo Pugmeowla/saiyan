@@ -1,0 +1,1 @@
+tellraw @a [{"text":"<","color":"white"},{"text":"King Kai","color":"gold"},{"text":"> Holy hell, you dumb saiyan bastard! Stacking Kaio-ken on top of Super Saiyan Grade 3 is a f***ing one-way ticket to exploding your dumb ass!","color":"white"}]

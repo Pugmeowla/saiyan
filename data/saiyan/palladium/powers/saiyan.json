@@ -26,6 +26,7 @@
     "saiyan_loop": {
       "type": "palladium:command",
       "hidden": false,
+      "description": "The Base Form of a Saiyan, slightly better than the player in terms of stats, but allows Ki Control",
       "title": { "translate": "species.alienevo_aliens.264" },
       "icon": "#alienevo:alien_sel",
       "gui_position": [0, 0],
@@ -1047,7 +1048,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Ki-Blast",
-      "icon": "minecraft:snowball",
+      "icon": "saiyan:textures/models/ki-blast.png",
+      "description": "Shoots out Ki-Blasts similar to what a Petrosapien can do, but this uses Ki.",
       "gui_position": [0, -1],
       "first_tick_commands": ["tag @s add ki-blast"],
       "last_tick_commands": [],
@@ -1073,7 +1075,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Kamehameha",
-      "icon": "minecraft:end_rod",
+      "icon": "saiyan:textures/models/kamehameha.png",
+      "description": "KAMEHAMEHAAAAAAA (You can do /tag @s remove voice or /tag @s add voice for the voicelines, disabled by default",
       "gui_position": [0.5, -1.5],
       "first_tick_commands": ["tag @s add kamehameha"],
       "last_tick_commands": [],
@@ -1099,7 +1102,8 @@
       "type": "palladium:command",
       "hidden": false,
       "title": "Kaio-Ken",
-      "icon": "minecraft:end_rod",
+      "icon": "saiyan:textures/models/wheel.png",
+      "description": "There are 5 levels, x2, x3, x4, x10, and x20. This will make your energy drain muhc quicker.",
       "gui_position": [-1, -2],
       "first_tick_commands": ["tag @s add kaioken"],
       "last_tick_commands": [],
@@ -1110,6 +1114,33 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "flight-dummy"
+          },
+          {
+            "type": "palladium:scoreboard_score_buyable",
+            "objective": "Saiyan.SkillPoint",
+            "score": 2,
+            "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+            "description": "test"
+          }
+        ]
+      }
+    },
+    "instant_t-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Instant Transmission",
+      "icon": "minecraft:textures/particle/bubble_pop_1.png",
+      "description": "Use the command /instant_t (name of entity)",
+      "gui_position": [1, -2],
+      "first_tick_commands": ["tag @s add instant_t"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "kamehameha-dummy"
           },
           {
             "type": "palladium:scoreboard_score_buyable",
@@ -1196,7 +1227,8 @@
         "schedule function saiyan:ssj1-g1 24t",
         "schedule function saiyan:remove_tag 20t",
         "tag @s add transforming",
-        "tag @s add transforming2"
+        "tag @s add transforming2",
+        "playsound minecraft:block.end_portal_frame.fill master @p ~ ~ ~ 1 1"
       ],
       "conditions": {
         "enabling": [
@@ -1289,7 +1321,8 @@
         "schedule function saiyan:ssj1-g4 24t",
         "schedule function saiyan:remove_tag 20t",
         "tag @s add transforming",
-        "tag @s add transforming2"
+        "tag @s add transforming2",
+        "playsound minecraft:block.end_portal_frame.fill master @p ~ ~ ~ 1 1"
       ],
       "conditions": {
         "enabling": [
@@ -1347,7 +1380,8 @@
         "schedule function saiyan:ssj_god 24t",
         "schedule function saiyan:remove_tag 20t",
         "tag @s add transforming",
-        "tag @s add transforming2"
+        "tag @s add transforming2",
+        "playsound minecraft:block.end_portal_frame.fill master @p ~ ~ ~ 1 1"
       ],
       "conditions": {
         "enabling": [
@@ -2283,6 +2317,85 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "voice"
+          }
+        ]
+      }
+    },
+    "kame_command4": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/models/kamehameha.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "tag @s add kame1",
+        "function saiyan:kame",
+        "playsound saiyan:kamehameha2 block @a[tag=kame1] ~ ~ ~"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "kame1"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "kame3"
+                  }
+                ]
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "voice"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "kame_command5": {
+      "type": "palladium:command",
+      "icon": "saiyan:textures/models/kamehameha.png",
+      "title": "Base Form",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["playsound saiyan:kamehameha3 block @s ~ ~ ~"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kame3"
           }
         ]
       }

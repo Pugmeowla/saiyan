@@ -429,7 +429,8 @@
         "schedule function saiyan:ssj_blue 24t",
         "schedule function saiyan:remove_tag 20t",
         "tag @s add transforming",
-        "tag @s add transforming2"
+        "tag @s add transforming2",
+        "playsound minecraft:block.end_portal_frame.fill master @p ~ ~ ~ 1 1"
       ],
       "conditions": {
         "enabling": [
@@ -1283,7 +1284,10 @@
         "schedule function saiyan:ui_sign 24t",
         "schedule function saiyan:remove_tag 20t",
         "tag @s add transforming",
-        "tag @s add transforming2"
+        "tag @s add transforming2",
+        "playsound minecraft:block.end_portal_frame.fill master @p ~ ~ ~ 1 1",
+        "effect give @s minecraft:levitation 3 1 true",
+        "effect give @s minecraft:slow_falling 5 1 true"
       ],
       "conditions": {
         "enabling": [
