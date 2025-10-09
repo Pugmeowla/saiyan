@@ -1,14 +1,14 @@
 {
   "display": {
     "title": {
-      "text": "Kill Saiyan",
-      "color": "light_purple"
+      "text": "It’s over Dummy 3 I’ve come for you!",
+      "color": "yellow"
     },
     "description": {
-      "text": "Kill Saiyan 3 (Dont worry if the advancement is blank after killing him, this is done so you can re-fight him if need be :)"
+      "text": "Kill Dummy 3 (Dont worry if the advancement is blank after killing him, this is done so you can re-fight him if need be :)"
     },
     "icon": {
-      "item": "minecraft:clock"
+      "item": "saiyan:saiyan_ki"
     },
     "frame": "challenge",
     "show_toast": true,

@@ -1,14 +1,14 @@
 {
   "display": {
     "title": {
-      "text": "Kill Weak Saiyan",
-      "color": "light_purple"
+      "text": "The first true challenge",
+      "color": "yellow"
     },
     "description": {
-      "text": "Kill Saiyan Weak 1 (Dont worry if the advancement is blank after killing him, this is done so you can re-fight him if need be :)"
+      "text": "Kill a Weak 1 Dummy (Dont worry if the advancement is blank after killing him, this is done so you can re-fight him if need be :)"
     },
     "icon": {
-      "item": "minecraft:clock"
+      "item": "saiyan:icon"
     },
     "frame": "challenge",
     "show_toast": true,

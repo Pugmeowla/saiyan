@@ -2,13 +2,13 @@
   "display": {
     "title": {
       "text": "A New Best Friend :)",
-      "color": "light_purple"
+      "color": "yellow"
     },
     "description": {
-      "text": "Tame a dog"
+      "text": "Tame a dog, it is now your best friend in the whole world :D (I hope nothing bad happens to it or something)"
     },
     "icon": {
-      "item": "minecraft:clock"
+      "item": "minecraft:wolf_spawn_egg"
     },
     "frame": "challenge",
     "show_toast": true,

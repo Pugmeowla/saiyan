@@ -1,0 +1,6 @@
+{
+  "type": "palladium:render_layer",
+  "slot": "saiyan:saiyan",
+  "render_layer": "saiyan:saiyan_chestplate",
+  "disable_rendering": false
+}

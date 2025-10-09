@@ -571,7 +571,10 @@
       "description": "null",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:ape saiyan:saiyan"],
+      "commands": [
+        "playsound saiyan:powerdown block @s",
+        "superpower replace saiyan:ape saiyan:saiyan"
+      ],
       "conditions": {
         "enabling": [
           {

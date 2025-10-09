@@ -1,7 +1,7 @@
 {
   "display": {
     "title": {
-      "text": "Saiyan Awakening",
+      "text": "Pugmeowla's Saiyan Awakening",
       "color": "yellow",
       "bold": false,
       "obfuscated": false,
@@ -9,7 +9,7 @@
       "underlined": false
     },
     "description": {
-      "text": "by Pugmeowla"
+      "text": "by Pugmeowla :D"
     },
     "icon": {
       "item": "saiyan:icon"

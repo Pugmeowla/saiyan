@@ -7,5 +7,8 @@
   "item.saiyan.music_disc_ultimate_battle.desc": "ZENTA and Akira Kushida - Kyuukyoku no Battle / The Ultimate Battle",
   "item.saiyan.music_disc_chouzetsu_dynamic.desc": "Kazuya Yoshii - Chōzetsu Dynamic!",
   "item.saiyan.music_disc_dragon_soul.desc": "Yumi Yoshimoto and Takayoshi Tanimoto - Dragon Soul",
-  "item.saiyan.saiyan_ki": "Saiyan Ki"
+  "item.saiyan.saiyan_ki": "Saiyan Ki",
+  "item.saiyan.saiyan_hair": "Saiyan Hair",
+  "accessory_slot.saiyan.saiyan": "Saiyan Accessories",
+  "accessory.saiyan.saiyan": "Saiyan Armor"
 }

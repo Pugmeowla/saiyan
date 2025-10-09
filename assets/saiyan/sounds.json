@@ -102,5 +102,26 @@
         "stream": true
       }
     ]
+  },
+  "punch": {
+    "sounds": [
+      "saiyan:punch1",
+      "saiyan:punch2",
+      "saiyan:punch3",
+      "saiyan:punch4",
+      "saiyan:punch5"
+    ]
+  },
+  "ki_blast": {
+    "sounds": ["saiyan:ki_blast"]
+  },
+  "kaioken": {
+    "sounds": ["saiyan:kaioken"]
+  },
+  "oozaru": {
+    "sounds": ["saiyan:oozaru"]
+  },
+  "aura": {
+    "sounds": ["saiyan:aura"]
   }
 }
