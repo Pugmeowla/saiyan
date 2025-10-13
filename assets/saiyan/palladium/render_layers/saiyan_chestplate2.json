@@ -1,0 +1,13 @@
+{
+  "type": "geckolib:default",
+  "model": "saiyan:geo/saiyan_chestplate2.geo.json",
+  "texture": "saiyan:textures/models/saiyan_chestplate2.png",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
+}

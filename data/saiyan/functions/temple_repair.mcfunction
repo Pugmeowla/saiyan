@@ -14,4 +14,4 @@ execute in saiyan:chamber run summon armor_stand 21 74 18 {Tags:["chamber_exit"]
 
 execute in minecraft:overworld run summon armor_stand 81 151 1997 {Tags:["chamber_entrance"],Invisible:1b,NoGravity:1b,Marker:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,DisabledSlots:4144959,ArmorItems:[{},{},{},{}],HandItems:[{},{}]}
 
-execute in saiyan:chamber run effect give @a minecraft:saturation 6000 0 true
+execute as @a if dimension saiyan:chamber run effect give @s minecraft:saturation 6000 0 true
