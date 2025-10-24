@@ -1,6 +1,6 @@
 {
   "name": {
-    "text": "Chronosapien Scanned"
+    "text": "Saiyan Scanned"
   },
   "icon": "alienevo:textures/gui/fakeatrix/omnitrix_scan.png",
   "background": "alienevo:textures/gui/power_screen/power_screen.png",
@@ -13,8 +13,8 @@
   "abilities": {
     "unlock": {
       "type": "palladium:command",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_265.png",
-      "title": "Super Saiyan",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
+      "title": "Saiyan",
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
@@ -24,7 +24,8 @@
       "last_tick_commands": [],
       "commands": [
         "execute as @s run function saiyan:scan",
-        "clear @s saiyan:saiyan_hair 1",
+        "item replace entity @s weapon.mainhand with minecraft:air 1",
+        "playsound alienevo:prototype_core_place player @s",
         "alienautoadd @s saiyan:saiyan"
       ],
       "conditions": {

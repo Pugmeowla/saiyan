@@ -3,7 +3,7 @@
   "layers": [
     {
       "type": "geckolib:default",
-      "model": "saiyan:geo/aliens/alien_264/saiyan.geo.json",
+      "model": "saiyan:geo/aliens/alien_264/saiyan_slim.geo.json",
       "texture": "saiyan:textures/models/aliens/alien_264/god.png",
       "bones": {
         "head": "head",
@@ -12,6 +12,23 @@
         "left_arm": "left_arm",
         "right_leg": "right_leg",
         "left_leg": "left_leg"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/mouth.geo.json",
+      "texture": {
+      "base": "saiyan:textures/models/aliens/alien_264/#X_mouth.png",
+                "variables": {
+                    "X": {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "saiyan:ssj_god",
+                        "ability": "mouth_timer"
+                    }
+                  }
+                },
+      "bones": {
+        "head": "Head"
       }
     },
     {
@@ -25,6 +42,22 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/tail.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_264/ssjg_tail.png",
+      "bones": {
+        "body": "body"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/eyes.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_264/god_hair.png",
+      "bones": {
+        "head": "Head"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/gi.geo.json",
       "texture": "saiyan:textures/models/aliens/alien_264/god_hair.png",
       "bones": {
         "body": "body"

@@ -17,6 +17,23 @@
     },
     {
       "type": "geckolib:default",
+      "model": "saiyan:geo/mouth.geo.json",
+      "texture": {
+      "base": "saiyan:textures/models/aliens/alien_264/#X_mouth.png",
+                "variables": {
+                    "X": {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "saiyan:ue",
+                        "ability": "mouth_timer"
+                    }
+                  }
+                },
+      "bones": {
+        "head": "Head"
+      }
+    },
+    {
+      "type": "geckolib:default",
       "model": "saiyan:geo/aliens/alien_264/base_hair.geo.json",
       "texture": "saiyan:textures/models/aliens/alien_264/ue_hair.png",
       "enchantment_glint": true,
@@ -27,8 +44,23 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/tail.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_264/ue_tail.png",
+      "bones": {
+        "body": "body"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/eyes.geo.json",
       "texture": "saiyan:textures/models/aliens/alien_264/ue_hair.png",
-      "enchantment_glint": true,
+      "bones": {
+        "head": "Head"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/gi.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_264/base_hair.png",
       "bones": {
         "body": "body"
       }

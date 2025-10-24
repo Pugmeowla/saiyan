@@ -6,4 +6,4 @@ give @p minecraft:written_book{title:"Summon Weak Dummy",author:"Kami (Pugmeowla
 
 give @p minecraft:written_book{title:"Return to Overworld",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to retrun","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/tp @s @e[tag=chamber_entrance,limit=1]"}}]']} 1
 
-give @p minecraft:written_book{title:"Hyperbolic Time Chamber",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to enter","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/execute in saiyan:chamber run tp @s 20 73 18"}}]']} 1
+give @p minecraft:written_book{title:"Hyperbolic Time Chamber",author:"Kami (Pugmeowla)",pages:['[{"text":"Click to enter","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/execute in saiyan:chamber run tp @s 76 79 94"}}]']} 1

@@ -19,10 +19,10 @@
         0,
         0
       ],
-      "description": "A wolf-like alien with enhanced agility and senses, capable of unleashing powerful sonic howls and leaping great distances",
+      "description": "A warrior alien race capable of transforming and mastering techniques",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_209.png",
       "first_tick_commands": [
-        "scoreboard players set Pugmeowla saiyan_scan 0",
+        "scoreboard players set @s saiyan_scan 0",
         "alienautoadd @s saiyan:saiyan"
       ],
       "last_tick_commands": [
@@ -47,7 +47,7 @@
         0
       ],
       "description": "A wolf-like alien with enhanced agility and senses, capable of unleashing powerful sonic howls and leaping great distances",
-      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_209.png",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
       "first_tick_commands": [
         "superpower replace saiyan:saiyan_scanned alienevo:prototype_omnitrix"
       ],

@@ -285,6 +285,22 @@
     {
       "type": "geckolib:default",
       "model": "saiyan:geo/tail.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_264/mob_tail.png",
+      "bones": {
+        "body": "body"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/eyes.geo.json",
+      "texture": "saiyan:textures/models/aliens/alien_264/base_hair_mob.png",
+      "bones": {
+        "head": "Head"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "saiyan:geo/gi.geo.json",
       "texture": "saiyan:textures/models/aliens/alien_264/base_hair_mob.png",
       "bones": {
         "body": "body"

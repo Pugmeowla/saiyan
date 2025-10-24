@@ -479,8 +479,8 @@
     },
     "transform_abil": {
       "type": "palladium:animation_timer",
-      "list_index": 1,
-      "max_value": 5,
+      "start_value": 0,
+      "max_value": 30,
       "bar_color": "orange",
       "title": { "translate": "ability.alienevo_aliens.6.block" },
       "hidden": true,
@@ -494,6 +494,43 @@
         ]
       }
     },
+    "mouth_timer": {
+            "type": "palladium:animation_timer",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "start_value": 0,
+            "max_value": 1,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "power": "null",
+                                "ability": "charge_abil"
+                            },
+                            {
+                                "type": "palladium:ability_integer_property",
+                                "power": "null",
+                                "ability": "transform_abil",
+                                "min": 9,
+                                "max": 30
+                            }
+                        ]
+                    },
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "saiyan:ape"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
     "remove_tag": {
       "type": "palladium:command",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
@@ -515,7 +552,7 @@
     "ssj4": {
       "type": "palladium:command",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ssj4.png",
-      "title": "Super Saiyan",
+      "title": "Super Saiyan 4",
       "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": false,
@@ -549,7 +586,7 @@
     "base": {
       "type": "palladium:command",
       "icon": "saiyan:textures/gui/playlists/playlist_1/alien_264.png",
-      "title": "Super Saiyan",
+      "title": "Base",
       "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": false,
@@ -584,7 +621,7 @@
     "charge": {
       "type": "palladium:command",
       "icon": "saiyan:textures/models/ki.png",
-      "title": "Super Saiyan",
+      "title": "Ki Charge",
       "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": false,
@@ -1318,7 +1355,7 @@
     "ue": {
       "type": "palladium:command",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ue.png",
-      "title": "Super Saiyan",
+      "title": "Ultra Ego",
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
@@ -1362,8 +1399,8 @@
     "charge_abil": {
       "type": "palladium:animation_timer",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_264.png",
-      "list_index": 1,
-      "max_value": 5,
+      "start_value": 0,
+      "max_value": 20,
       "bar_color": "orange",
       "title": "test",
       "hidden": true,

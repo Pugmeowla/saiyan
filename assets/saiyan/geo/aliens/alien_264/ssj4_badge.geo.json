@@ -33,10 +33,10 @@
 				},
 				{
 					"name": "armorBody",
-					"pivot": [0, 24, 0.25],
+					"pivot": [0, 24, 0.75],
 					"cubes": [
 						{
-							"origin": [-1, 12, -3],
+							"origin": [-1, 12, -2.5],
 							"size": [2, 2, 1],
 							"inflate": 0.1,
 							"uv": {
