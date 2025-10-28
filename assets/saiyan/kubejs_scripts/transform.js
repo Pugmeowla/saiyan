@@ -1,6 +1,13 @@
 
         // Check all Saiyan powers
-        let powers = ['saiyan:saiyan', 'saiyan:ssj1-g1', 'saiyan:ssj2', 'saiyan:ssj3','saiyan:ssj1-g4','saiyan:ssj_god','saiyan:ssj_blue','saiyan:ssj_blue_evo','saiyan:ssj4','saiyan:ui_sign','saiyan:ui_perfect','saiyan:ue'];
+        let powers = [
+            'saiyan:saiyan', 'saiyan:ssj1-g1', 
+            'saiyan:ssj2', 'saiyan:ssj3',
+            'saiyan:ssj1-g4','saiyan:ssj_god',
+            'saiyan:ssj_blue','saiyan:ssj_blue_evo',
+            'saiyan:ssj4','saiyan:ui_sign','saiyan:ui_perfect',
+            'saiyan:ue'
+        ];
 
 //Base -> SSJ
 PalladiumEvents.registerAnimations((event) => {
@@ -1078,7 +1085,7 @@ PalladiumEvents.registerAnimations((event) => {
 PalladiumEvents.registerAnimations((event) => {
         event.register('saiyan/ssjb2', 30, (builder) => {
             let ssjb2 = animationUtil.getAnimationTimerAbilityValue(
-            builder.getPlayer(), 'saiyan:ssj_god', 'transform_abil', builder.getPartialTicks(), 1, 6);
+            builder.getPlayer(), 'saiyan:ssj_blue', 'transform_abil', builder.getPartialTicks(), 1, 6);
             if (ssjb2 > 0 && !builder.isFirstPerson()) {
                 builder.get('head')
                     .setXRotDegrees(5.8)

@@ -446,7 +446,7 @@
       "title": "Controlled Great Ape",
       "icon": "saiyan:textures/gui/playlists/playlist_1/ape.png",
       "description": "This transformation massively increases your strength and size but reduces fine control",
-      "gui_position": [0.5, 1],
+      "gui_position": [0, 1],
       "first_tick_commands": ["tag @s add ape"],
       "last_tick_commands": [],
       "commands": [],
@@ -473,7 +473,7 @@
       "title": "Golden Great Ape",
       "icon": "saiyan:textures/gui/playlists/playlist_1/golden_ape.png",
       "description": "This transformation unlocks immense primal power and rage, serving as the bridge to Super Saiyan 4",
-      "gui_position": [1, 1.5],
+      "gui_position": [0, 1.5],
       "first_tick_commands": ["tag @s add golden_ape"],
       "last_tick_commands": [],
       "commands": [],
@@ -1250,8 +1250,7 @@
       "title": "Super Saiyan 2",
       "bar_color": "light_gray",
       "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 3,
+      "hidden_in_bar": true,
       "gui_position": "null",
       "description": "null",
       "first_tick_commands": [],
@@ -1398,8 +1397,7 @@
       "title": "Super Saiyan God",
       "bar_color": "light_gray",
       "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 3,
+      "hidden_in_bar": true,
       "gui_position": "null",
       "description": "null",
       "first_tick_commands": [],
@@ -1428,9 +1426,6 @@
             "min": 1000
           },
           {
-            "type": "palladium:crouching"
-          },
-          {
             "type": "palladium:has_tag",
             "tag": "ssj_god"
           }
@@ -1438,23 +1433,25 @@
       }
     },
     "charge": {
-      "type": "palladium:command",
+      "type": "gravecore:particle_aura",
       "icon": "saiyan:textures/models/ki.png",
-      "title": "Charge",
+      "title": "Charge Ki",
+      "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": false,
-      "list_index": 3,
+      "list_index": 5,
+      "gui_position": "null",
+      "description": "null",
+      "count": 4,
+      "start_hex": "#AAF0FF",
+      "end_hex": "#AAF0FF",
+      "aura_type": "aura",
+      "particle_type": "smoke",
+      "particle_size": 0.8,
       "energy_bar_usage": {
         "energy_bar": "base",
         "amount": -10
       },
-      "first_tick_commands": [
-        "effect give @s minecraft:slowness infinite 255 true"
-      ],
-      "last_tick_commands": ["effect clear @s minecraft:slowness"],
-      "commands": [
-        "execute at @p anchored feet run particle minecraft:campfire_cosy_smoke ~ ~0.2 ~ 0.5 0 0.5 0 10 force"
-      ],
       "conditions": {
         "enabling": [
           {
@@ -1482,6 +1479,7 @@
       "type": "palladium:animation_timer",
       "start_value": 0,
       "max_value": 20,
+      "gui_position": "null",
       "hidden": true,
       "hidden_in_bar": true,
       "conditions": {
@@ -1503,24 +1501,11 @@
                 "enabling": [
                     {
                         "type": "palladium:ability_enabled",
-                        "ability": "charge"
+                        "ability": "charge_abil"
                     }
                 ]
             }
         },
-    "charge_render": {
-      "type": "palladium:render_layer",
-      "hidden": true,
-      "render_layer": "saiyan:charge",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:ability_enabled",
-            "ability": "charge"
-          }
-        ]
-      }
-    },
     "fall_damage": {
       "type": "palladium:damage_immunity",
       "icon": "minecraft:potion",
@@ -2002,10 +1987,10 @@
         ]
       }
     },
-    "kaioken_wheel": {
+    "technique_wheel": {
       "type": "palladium:ability_wheel",
       "icon": "saiyan:textures/models/wheel.png",
-      "title": "null",
+      "title": "Techniques",
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": false,
@@ -2019,7 +2004,45 @@
         "kaiokenx4_button",
         "kaiokenx10_button",
         "kaiokenx20_button",
-        "ape2"
+        "ape2",
+        "ui_sign",
+        "ue"
+      ],
+      "texture": "null",
+      "disable_mouse_scrolling": false,
+      "disable_center_icon": false,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "kaioken"
+          }
+        ]
+      }
+    },
+    "form_wheel": {
+      "type": "palladium:ability_wheel",
+      "icon": "saiyan:textures/models/form_wheel.png",
+      "title": "Forms",
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "null",
+      "abilities": [
+        "ssj1-g4",
+        "ssj2",
+        "ssj3",
+        "ssj_god",
+        "ssj_blue",
+        "ssj4"
       ],
       "texture": "null",
       "disable_mouse_scrolling": false,
