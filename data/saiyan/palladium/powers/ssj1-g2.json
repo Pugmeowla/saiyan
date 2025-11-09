@@ -80,7 +80,7 @@
     "render_layer_kaioken": {
       "type": "palladium:render_layer",
       "hidden": true,
-      "render_layer": "saiyan:aliens/alien_264/ssj1-g1-kaioken",
+      "render_layer": "saiyan:aliens/alien_264/kaioken_ssj",
       "conditions": {
         "unlocking": [
           {
@@ -424,7 +424,7 @@
       "description": "null",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["superpower replace saiyan:ssj2 saiyan:ssj1-g1"],
+      "commands": ["superpower replace saiyan:ssj1-g2 saiyan:ssj1-g1"],
       "conditions": {
         "enabling": [
           {
@@ -1308,7 +1308,7 @@
       "list_index": -1,
       "gui_position": "null",
       "description": "null",
-      "first_tick_commands": ["advancement grant @s only saiyan:ss1-g2"],
+      "first_tick_commands": ["advancement grant @s only saiyan:ssj1-g2"],
       "last_tick_commands": [],
       "commands": []
     },
