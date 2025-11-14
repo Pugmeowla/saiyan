@@ -1,5 +1,5 @@
 execute in saiyan:chamber run kill @e[type=minecraft:armor_stand]
-execute in minecraft:overworld run kill @e[type=minecraft:armor_stand,tag=chamber_entrance]
+
 execute in saiyan:chamber run forceload add 0 0
 execute in saiyan:chamber run setblock 0 72 0 minecraft:structure_block{mode:"LOAD",name:"saiyan:chamber/chamber",posX:0,posY:0,posZ:0,rotation:"NONE",mirror:"NONE",ignoreEntities:0b,integrity:1.0f,seed:0L,auto:0b} replace
 execute in saiyan:chamber run setblock 0 73 0 redstone_block

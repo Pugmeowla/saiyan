@@ -40,8 +40,17 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_power",
-            "power": "alienevo:prototype_omnitrix"
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "alienevo:prototype_omnitrix"
+              },
+              {
+                "type": "palladium:has_power",
+                "power": "aeo:omniverse_omnitrix"
+              }
+            ]
           }
         ]
       }
